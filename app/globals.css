@@ -178,13 +178,55 @@ body {
 
 /* Print styles for certificate */
 @media print {
-  .no-print {
+  .no-print,
+  nav,
+  footer,
+  header,
+  .navbar {
     display: none !important;
   }
 
   body {
     background: white !important;
     color: black !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Hide everything except certificate */
+  body > * {
+    visibility: hidden;
+  }
+
+  #certificate-print,
+  #certificate-print * {
+    visibility: visible !important;
+  }
+
+  #certificate-print {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: none !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    aspect-ratio: auto !important;
+  }
+
+  @page {
+    size: A4 landscape;
+    margin: 0;
   }
 }
 

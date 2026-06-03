@@ -1,9 +1,9 @@
 'use client'
 
 import { useSession } from 'next-auth/react'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { redirect } from 'next/navigation'
-import { User, Mail, Hash, Users, Trophy, BookOpen, ClipboardList, Printer } from 'lucide-react'
+import { User, Mail, Hash, Users, Trophy, BookOpen, ClipboardList, Printer, Download, X, Award, Star, Eye } from 'lucide-react'
 import Card from '@/components/ui/Card'
 import Badge from '@/components/ui/Badge'
 import Button from '@/components/ui/Button'
@@ -11,9 +11,170 @@ import Progress from '@/components/ui/Progress'
 import { StudentProgress } from '@/types'
 import { cn, gradeColor, gradeLabel, gradeFromPercentage, formatDate } from '@/lib/utils'
 
+function CertificateModal({ user, pct, grade, onClose }: { user: any; pct: number; grade: string; onClose: () => void }) {
+  const certRef = useRef<HTMLDivElement>(null)
+  const today = new Date().toLocaleDateString('uz-UZ', { year: 'numeric', month: 'long', day: 'numeric' })
+  const certNumber = `TATU-SST-${new Date().getFullYear()}-${(user.studentId || user.email || '').slice(-6).toUpperCase().replace(/[^A-Z0-9]/g, '0')}`
+
+  const handlePrint = () => window.print()
+
+  return (
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4" style={{ backgroundColor: 'rgba(0,0,0,0.7)' }}>
+      {/* Close + Actions bar */}
+      <div className="absolute top-4 right-4 flex items-center gap-2 no-print z-[110]">
+        <button onClick={handlePrint} className="flex items-center gap-2 bg-white text-gray-700 px-4 py-2 rounded-lg shadow-lg hover:bg-gray-50 transition text-sm font-medium">
+          <Printer size={16} /> Chop etish
+        </button>
+        <button onClick={onClose} className="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center text-gray-600 hover:bg-white hover:text-gray-900 transition shadow-lg">
+          <X size={20} />
+        </button>
+      </div>
+
+      {/* Certificate */}
+      <div ref={certRef} id="certificate-print" className="certificate-container bg-white relative overflow-hidden" style={{ width: '900px', maxWidth: '95vw', aspectRatio: '1.414', maxHeight: '90vh' }}>
+        {/* Watermark pattern */}
+        <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23337ab7' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        }} />
+
+        {/* Outer decorative border */}
+        <div className="absolute inset-3 border-2 border-[#b8860b] pointer-events-none" />
+        <div className="absolute inset-5 border border-[#b8860b]/40 pointer-events-none" />
+        <div className="absolute inset-6 border border-[#b8860b]/20 pointer-events-none" />
+
+        {/* Corner ornaments */}
+        {['top-4 left-4', 'top-4 right-4 rotate-90', 'bottom-4 left-4 -rotate-90', 'bottom-4 right-4 rotate-180'].map((pos, i) => (
+          <div key={i} className={`absolute ${pos} w-16 h-16 pointer-events-none`}>
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 5 L5 25 Q5 5 25 5 Z" fill="#b8860b" opacity="0.6" />
+              <path d="M5 5 L5 40 M5 5 L40 5" stroke="#b8860b" strokeWidth="1" opacity="0.3" />
+              <circle cx="5" cy="5" r="3" fill="#b8860b" opacity="0.5" />
+            </svg>
+          </div>
+        ))}
+
+        {/* Main content */}
+        <div className="relative z-10 flex flex-col items-center justify-center h-full px-10 py-8" style={{ minHeight: '100%' }}>
+          {/* Top decorative line */}
+          <div className="flex items-center gap-4 mb-3">
+            <div className="h-px w-20 bg-gradient-to-r from-transparent to-[#b8860b]" />
+            <Star size={14} className="text-[#b8860b]" />
+            <div className="h-px w-20 bg-gradient-to-l from-transparent to-[#b8860b]" />
+          </div>
+
+          {/* University name */}
+          <p className="text-[10px] tracking-[0.3em] uppercase text-[#337ab7] font-semibold mb-1">
+            Muhammad al-Xorazmiy nomidagi
+          </p>
+          <h2 className="text-lg font-bold text-[#337ab7] tracking-wide mb-1" style={{ fontFamily: 'Georgia, serif' }}>
+            TOSHKENT AXBOROT TEXNOLOGIYALARI UNIVERSITETI
+          </h2>
+          <p className="text-[10px] tracking-[0.25em] uppercase text-[#555] mb-4">
+            S-STUDY — Raqamli Ta&apos;lim Platformasi
+          </p>
+
+          {/* Decorative divider */}
+          <div className="flex items-center gap-3 mb-4">
+            <div className="h-px w-32 bg-gradient-to-r from-transparent via-[#b8860b] to-transparent" />
+            <div className="w-2 h-2 rotate-45 bg-[#b8860b]" />
+            <div className="h-px w-32 bg-gradient-to-r from-transparent via-[#b8860b] to-transparent" />
+          </div>
+
+          {/* SERTIFIKAT title */}
+          <h1 className="text-4xl font-bold tracking-wider text-[#1a1a1a] mb-1" style={{ fontFamily: 'Georgia, serif', letterSpacing: '0.15em' }}>
+            SERTIFIKAT
+          </h1>
+          <p className="text-[10px] tracking-[0.2em] uppercase text-[#999] mb-5">Certificate of Completion</p>
+
+          {/* Body text */}
+          <p className="text-sm text-[#555] mb-2">Ushbu sertifikat</p>
+
+          {/* Student name */}
+          <div className="relative mb-2">
+            <h3 className="text-3xl font-bold text-[#1a1a1a] px-8" style={{ fontFamily: 'Georgia, serif' }}>
+              {user.name}
+            </h3>
+            <div className="absolute -bottom-1 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#b8860b] to-transparent" />
+          </div>
+
+          {/* Student details */}
+          <div className="flex items-center gap-4 text-[11px] text-[#777] mb-3 mt-2">
+            {user.studentId && <span>Talaba ID: <strong className="text-[#555]">{user.studentId}</strong></span>}
+            {user.studentId && user.group && <span className="text-[#ccc]">|</span>}
+            {user.group && <span>Guruh: <strong className="text-[#555]">{user.group}</strong></span>}
+          </div>
+
+          {/* Course completed */}
+          <p className="text-sm text-[#555] mb-2">ga quyidagi kursni muvaffaqiyatli tugatgani uchun berildi:</p>
+
+          <div className="bg-[#f8f6f0] border border-[#e8e4d8] rounded-lg px-8 py-3 mb-4">
+            <p className="text-lg font-bold text-[#337ab7]" style={{ fontFamily: 'Georgia, serif' }}>
+              &ldquo;Raqamli Texnologiyalar va Innovatsiyalar&rdquo;
+            </p>
+            <p className="text-[11px] text-[#999] mt-0.5">15 mavzu — Video darslar, ma&apos;ruzalar va testlar</p>
+          </div>
+
+          {/* Score badges */}
+          <div className="flex items-center gap-6 mb-5">
+            <div className="text-center">
+              <div className="w-16 h-16 rounded-full border-3 flex items-center justify-center mx-auto mb-1" style={{ borderWidth: '3px', borderColor: '#b8860b' }}>
+                <span className="text-xl font-bold text-[#1a1a1a]" style={{ fontFamily: 'Georgia, serif' }}>{pct}%</span>
+              </div>
+              <p className="text-[10px] text-[#999] uppercase tracking-wider">Umumiy ball</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-1" style={{ borderWidth: '3px', borderColor: '#337ab7', border: '3px solid #337ab7' }}>
+                <span className="text-2xl font-bold text-[#337ab7]" style={{ fontFamily: 'Georgia, serif' }}>{grade}</span>
+              </div>
+              <p className="text-[10px] text-[#999] uppercase tracking-wider">Baho</p>
+            </div>
+          </div>
+
+          {/* Bottom section: date + signatures */}
+          <div className="w-full max-w-xl">
+            <div className="flex items-end justify-between">
+              {/* Date */}
+              <div className="text-center">
+                <p className="text-xs text-[#1a1a1a] font-medium mb-1">{today}</p>
+                <div className="h-px w-32 bg-[#333] mb-1" />
+                <p className="text-[10px] text-[#999]">Sana</p>
+              </div>
+
+              {/* Seal */}
+              <div className="flex flex-col items-center -mt-2">
+                <div className="w-20 h-20 rounded-full border-2 border-dashed border-[#b8860b]/50 flex items-center justify-center">
+                  <div className="w-16 h-16 rounded-full border border-[#b8860b]/30 flex items-center justify-center">
+                    <div className="text-center">
+                      <Award size={16} className="text-[#b8860b] mx-auto mb-0.5" />
+                      <p className="text-[7px] font-bold text-[#b8860b] leading-tight">TATU<br/>MUHR</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Signature */}
+              <div className="text-center">
+                <p className="text-xs text-[#1a1a1a] font-medium mb-1 italic" style={{ fontFamily: 'Georgia, serif' }}>O&apos;qituvchi</p>
+                <div className="h-px w-32 bg-[#333] mb-1" />
+                <p className="text-[10px] text-[#999]">Imzo</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Certificate number */}
+          <div className="mt-3 flex items-center gap-2">
+            <p className="text-[9px] text-[#bbb] tracking-wider">Sertifikat raqami: {certNumber}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export default function ProfilePage() {
   const { data: session, status } = useSession()
   const [progress, setProgress] = useState<StudentProgress | null>(null)
+  const [showCert, setShowCert] = useState(false)
 
   useEffect(() => {
     if (status === 'unauthenticated') window.location.href = '/auth/login'
@@ -34,10 +195,6 @@ export default function ProfilePage() {
   const completed = progress?.completedLessons ?? 0
   const allDone = completed >= 15
 
-  const printCertificate = () => {
-    window.print()
-  }
-
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
       <h1 className="text-2xl font-bold font-display text-text-primary mb-6">Mening profilim</h1>
@@ -46,7 +203,7 @@ export default function ProfilePage() {
         {/* User info */}
         <Card className="p-6">
           <div className="flex items-center gap-4 mb-5">
-            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-2xl font-bold text-white">
+            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#337ab7] to-[#286090] flex items-center justify-center text-2xl font-bold text-white">
               {user.name?.[0]?.toUpperCase()}
             </div>
             <div>
@@ -92,50 +249,54 @@ export default function ProfilePage() {
             </div>
             <div className="bg-surface-2 rounded-xl p-3 border border-border">
               <p className="text-lg font-bold text-text-primary">{pct}%</p>
-              <p className="text-xs text-text-muted">O'rtacha ball</p>
+              <p className="text-xs text-text-muted">O&apos;rtacha ball</p>
             </div>
           </div>
         </Card>
       </div>
 
-      {/* Certificate */}
+      {/* Certificate section */}
       {allDone && (
-        <>
-          <Card className="p-6 mb-6 bg-gradient-to-br from-yellow-500/5 to-orange-500/5 border-yellow-500/20">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <Trophy size={24} className="text-yellow-400" />
-                <div>
-                  <p className="font-bold text-text-primary">Sertifikat tayyor!</p>
-                  <p className="text-sm text-text-secondary">Barcha 15 mavzuni muvaffaqiyatli tugatdingiz</p>
-                </div>
-              </div>
-              <Button onClick={printCertificate} variant="secondary" size="sm">
-                <Printer size={14} />
-                Chop etish
-              </Button>
-            </div>
-          </Card>
+        <div className="mb-6 relative overflow-hidden rounded-2xl border-2 border-[#b8860b]/30 bg-gradient-to-br from-[#fdfbf5] to-[#f5f0e0] p-6">
+          {/* Subtle gold shimmer overlay */}
+          <div className="absolute inset-0 opacity-10 pointer-events-none" style={{
+            backgroundImage: 'linear-gradient(135deg, transparent 0%, #b8860b 50%, transparent 100%)',
+            backgroundSize: '200% 200%',
+            animation: 'shimmer 3s ease-in-out infinite',
+          }} />
 
-          {/* Printable certificate */}
-          <div id="certificate" className="hidden print:block bg-white text-black p-16 text-center">
-            <div className="border-8 border-double border-yellow-600 p-12">
-              <p className="text-4xl font-bold mb-2" style={{ fontFamily: 'serif' }}>S-STUDY</p>
-              <p className="text-lg text-gray-600 mb-8">TATU — Raqamli Ta'lim Platformasi</p>
-              <p className="text-xl mb-6">Ushbu sertifikat</p>
-              <p className="text-3xl font-bold mb-6" style={{ fontFamily: 'serif' }}>{user.name}</p>
-              <p className="text-xl mb-2">ga berildi. U quyidagi kursni muvaffaqiyatli tugatdi:</p>
-              <p className="text-2xl font-bold mb-8" style={{ fontFamily: 'serif' }}>
-                "Raqamli Texnologiyalar va Innovatsiyalar"
-              </p>
-              <p className="text-lg mb-2">Umumiy ball: <strong>{pct}%</strong> — Baho: <strong>{grade}</strong></p>
-              {user.studentId && <p className="text-base text-gray-600 mb-1">Talaba ID: {user.studentId}</p>}
-              {user.group && <p className="text-base text-gray-600 mb-8">Guruh: {user.group}</p>}
-              <p className="text-base text-gray-500">Sana: {new Date().toLocaleDateString('uz-UZ', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+          <div className="relative z-10 flex flex-col sm:flex-row items-center gap-5">
+            {/* Trophy animation */}
+            <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#f5d442] to-[#b8860b] flex items-center justify-center shadow-lg" style={{ boxShadow: '0 0 25px rgba(184,134,11,0.3)' }}>
+              <Trophy size={36} className="text-white drop-shadow" />
             </div>
+
+            <div className="flex-1 text-center sm:text-left">
+              <h3 className="text-xl font-bold text-[#1a1a1a] mb-1" style={{ fontFamily: 'Georgia, serif' }}>
+                🎓 Tabriklaymiz!
+              </h3>
+              <p className="text-sm text-[#666] mb-1">
+                Barcha <strong>15 mavzuni</strong> muvaffaqiyatli tugatdingiz. Sertifikatingiz tayyor!
+              </p>
+              <p className="text-xs text-[#999]">
+                Umumiy ball: <strong className="text-[#337ab7]">{pct}%</strong> — Baho: <strong className="text-[#337ab7]">{grade}</strong>
+              </p>
+            </div>
+
+            <button
+              onClick={() => setShowCert(true)}
+              className="flex items-center gap-2 bg-gradient-to-r from-[#b8860b] to-[#d4a520] text-white px-6 py-3 rounded-xl font-semibold text-sm hover:shadow-lg transition-all hover:scale-105 shrink-0"
+              style={{ boxShadow: '0 4px 15px rgba(184,134,11,0.3)' }}
+            >
+              <Eye size={18} />
+              Sertifikatni ko&apos;rish
+            </button>
           </div>
-        </>
+        </div>
       )}
+
+      {/* Certificate modal */}
+      {showCert && <CertificateModal user={user} pct={pct} grade={grade} onClose={() => setShowCert(false)} />}
 
       {/* Lesson results */}
       {progress && progress.lessons.length > 0 && (
@@ -147,13 +308,13 @@ export default function ProfilePage() {
                 .sort((a, b) => a.topicNumber - b.topicNumber)
                 .map((l) => (
                   <div key={l.lessonId} className="flex items-center gap-3 p-3 bg-surface-2 rounded-xl border border-border">
-                    <div className="w-7 h-7 rounded-lg bg-surface-3 border border-border flex items-center justify-center text-xs font-bold text-blue-400 shrink-0">
+                    <div className="w-7 h-7 rounded-lg bg-surface-3 border border-border flex items-center justify-center text-xs font-bold text-[#337ab7] shrink-0">
                       {l.topicNumber}
                     </div>
                     <div className="flex-1">
                       <Progress value={l.testPercentage} size="sm" />
                     </div>
-                    <span className={cn('text-sm font-bold w-10 text-right', l.testPassed ? 'text-emerald-400' : 'text-red-400')}>
+                    <span className={cn('text-sm font-bold w-10 text-right', l.testPassed ? 'text-emerald-500' : 'text-red-500')}>
                       {l.testPercentage}%
                     </span>
                   </div>
