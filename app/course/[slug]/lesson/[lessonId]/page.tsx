@@ -9,14 +9,15 @@ import LectureText from '@/components/course/LectureText'
 import TestModule from '@/components/course/TestModule'
 import LessonList from '@/components/course/LessonList'
 import CourseProgress from '@/components/course/CourseProgress'
+import ProjectSubmission from '@/components/course/ProjectSubmission'
 import Badge from '@/components/ui/Badge'
-import { Play, BookOpen, ClipboardList, Trophy, ChevronLeft, ChevronRight, Menu } from 'lucide-react'
+import { Play, BookOpen, ClipboardList, Trophy, ChevronLeft, ChevronRight, Menu, UploadCloud } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { Lesson, Question, StudentProgress } from '@/types'
 import Button from '@/components/ui/Button'
 import Link from 'next/link'
 
-type Tab = 'video' | 'lecture' | 'test' | 'grade'
+type Tab = 'video' | 'lecture' | 'test' | 'grade' | 'project'
 
 export default function LessonPage() {
   const { data: session } = useSession()
@@ -107,7 +108,13 @@ export default function LessonPage() {
       .then((d) => setProgress(d.progress ?? null))
   }
 
-  const tabs: { id: Tab; label: string; icon: React.ReactNode }[] = [
+  const isProject = lesson?.topicNumber === 12;
+
+  const tabs: { id: Tab; label: string; icon: React.ReactNode }[] = isProject ? [
+    { id: 'lecture', label: "Loyiha sharti", icon: <BookOpen size={14} /> },
+    { id: 'project', label: "Loyiha topshirish", icon: <UploadCloud size={14} /> },
+    { id: 'grade', label: 'Natija', icon: <Trophy size={14} /> },
+  ] : [
     { id: 'video', label: 'Video', icon: <Play size={14} /> },
     { id: 'lecture', label: "Ma'ruza", icon: <BookOpen size={14} /> },
     { id: 'test', label: 'Test', icon: <ClipboardList size={14} /> },
@@ -177,7 +184,7 @@ export default function LessonPage() {
           {/* Lesson header */}
           <div className="mb-6">
             <div className="flex items-center gap-2 mb-2">
-              <Badge variant="blue">{lesson.topicNumber}-mavzu</Badge>
+              <Badge variant={isProject ? "purple" : "blue"}>{isProject ? 'Yakuniy Loyiha' : lesson.topicNumber + '-mavzu'}</Badge>
               {lessonProg?.testPassed && <Badge variant="green">O'tildi</Badge>}
             </div>
             <h1 className="text-xl font-bold font-display text-text-primary">{lesson.title}</h1>
@@ -192,7 +199,7 @@ export default function LessonPage() {
                 onClick={() => setTab(t.id)}
                 className={cn(
                   'flex-1 flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-sm font-medium transition-all',
-                  tab === t.id
+                  (tab === t.id || (tab === 'video' && t.id === 'lecture' && isProject))
                     ? 'bg-surface text-text-primary shadow-sm border border-border'
                     : 'text-text-muted hover:text-text-secondary'
                 )}
@@ -205,13 +212,13 @@ export default function LessonPage() {
 
           {/* Tab content */}
           <div className="bg-surface border border-border rounded-2xl p-6">
-            {tab === 'video' && (
+            {(tab === 'video' && !isProject) && (
               <VideoPlayer videoUrl={lesson.videoUrl} title={lesson.title} onWatched={markVideo} />
             )}
-            {tab === 'lecture' && (
+            {(tab === 'lecture' || (tab === 'video' && isProject)) && (
               <LectureText content={lesson.lectureText} title={lesson.title} onRead={markLecture} />
             )}
-            {tab === 'test' && (
+            {tab === 'test' && !isProject && (
               questions.length > 0 ? (
                 <TestModule
                   questions={questions}
@@ -223,6 +230,17 @@ export default function LessonPage() {
               ) : (
                 <p className="text-text-muted text-center py-8">Bu mavzu uchun test mavjud emas</p>
               )
+            )}
+            {tab === 'project' && isProject && (
+              <ProjectSubmission
+                courseId={courseId}
+                lessonId={lessonId}
+                topicNumber={lesson.topicNumber}
+                onComplete={(passed) => {
+                  refreshProgress()
+                }}
+                bestScore={bestScore}
+              />
             )}
             {tab === 'grade' && (
               <div className="max-w-sm mx-auto">
