@@ -5,19 +5,10 @@ import { signIn } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { Eye, EyeOff, AlertCircle } from 'lucide-react'
+import Image from 'next/image'
 import Button from '@/components/ui/Button'
 
-function DoppiLogo() {
-  return (
-    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6">
-      <path d="M16 4C10.5 4 6 7.5 6 11.5V15C6 17 7 18.5 8.5 19.5L16 24L23.5 19.5C25 18.5 26 17 26 15V11.5C26 7.5 21.5 4 16 4Z" fill="#FAFAF5"/>
-      <path d="M16 6C11.5 6 8 8.5 8 11.5V14C8 15.5 9 16.8 10 17.5L16 21L22 17.5C23 16.8 24 15.5 24 14V11.5C24 8.5 20.5 6 16 6Z" fill="#2D6A4F"/>
-      <path d="M10 10.5L16 7.5L22 10.5" stroke="#B8860B" strokeWidth="1.5" strokeLinecap="round"/>
-      <line x1="8" y1="13" x2="24" y2="13" stroke="#B8860B" strokeWidth="0.8" opacity="0.5"/>
-      <circle cx="16" cy="7" r="1.2" fill="#B8860B"/>
-    </svg>
-  )
-}
+
 
 export default function LoginPage() {
   const router = useRouter()
@@ -55,8 +46,8 @@ export default function LoginPage() {
       <div className="relative w-full max-w-sm">
         {/* Logo */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-[#1B4332] shadow-md mb-4">
-            <DoppiLogo />
+          <div className="inline-flex items-center justify-center mb-4">
+            <Image src="/logo.png" alt="M-ta'lim" width={200} height={64} className="h-16 w-auto object-contain" />
           </div>
           <h1 className="text-2xl font-bold font-display text-text-primary">Kirish</h1>
           <p className="text-sm text-text-muted mt-1">M-ta'lim platformasiga xush kelibsiz</p>
