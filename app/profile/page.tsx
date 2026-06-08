@@ -108,7 +108,7 @@ function CertificateModal({ user, pct, grade, onClose }: { user: any; pct: numbe
             <p className="text-lg font-bold text-[#1B4332]" style={{ fontFamily: 'Georgia, serif' }}>
               &ldquo;Raqamli Texnologiyalar va Innovatsiyalar&rdquo;
             </p>
-            <p className="text-[11px] text-[#999] mt-0.5">15 mavzu — Video darslar, ma&apos;ruzalar va testlar</p>
+            <p className="text-[11px] text-[#999] mt-0.5">11 ta mavzu va Yakuniy amaliy loyiha himoyasi</p>
           </div>
 
           {/* Score badges */}

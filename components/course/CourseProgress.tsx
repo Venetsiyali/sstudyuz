@@ -8,7 +8,7 @@ interface CourseProgressProps {
   totalLessons?: number
 }
 
-export default function CourseProgress({ progress, totalLessons = 15 }: CourseProgressProps) {
+export default function CourseProgress({ progress, totalLessons = 12 }: CourseProgressProps) {
   const completed = progress?.completedLessons ?? 0
   const overall = progress?.overallPercentage ?? 0
   const grade = gradeFromPercentage(overall)

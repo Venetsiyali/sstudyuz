@@ -10,10 +10,10 @@ import { LESSONS } from '@/lib/data'
 
 export default function HomePage() {
   const features = [
-    { icon: <Play size={20} className="text-[#1B4332]" />, title: 'Video darslar', desc: '15 ta professional video ma\'ruza, jami 22+ soat kontent' },
+    { icon: <Play size={20} className="text-[#1B4332]" />, title: 'Video darslar', desc: '11 ta professional video ma\'ruza va loyiha, jami 22+ soat kontent' },
     { icon: <BookOpen size={20} className="text-[#B8860B]" />, title: "Ma'ruza matnlari", desc: "Har bir mavzu bo'yicha batafsil ma'ruza matni va misollar" },
-    { icon: <ClipboardList size={20} className="text-[#1A5276]" />, title: 'Interaktiv testlar', desc: 'Har mavzudan 5 savol, natijalar va tushuntirishlar bilan' },
-    { icon: <Trophy size={20} className="text-[#D4A520]" />, title: 'Sertifikat', desc: "Kursni muvaffaqiyatli tugatgach elektron sertifikat olasiz" },
+    { icon: <ClipboardList size={20} className="text-[#1A5276]" />, title: 'Interaktiv testlar', desc: 'Sertifikatga ega bo\'lish uchun testlar va yakuniy loyiha himoyasi' },
+    { icon: <Trophy size={20} className="text-[#D4A520]" />, title: 'Sertifikat', desc: "Kursni muvaffaqiyatli tugatib, loyihani himoya qilgach elektron sertifikat olasiz" },
   ]
 
   const highlights = [
@@ -26,9 +26,9 @@ export default function HomePage() {
   ]
 
   const stats = [
-    { icon: <BookOpen size={18} />, value: '15', label: 'Mavzu' },
+    { icon: <BookOpen size={18} />, value: '11+1', label: 'Mavzu' },
     { icon: <Play size={18} />, value: '22+', label: 'Soat video' },
-    { icon: <ClipboardList size={18} />, value: '75', label: 'Test savoli' },
+    { icon: <ClipboardList size={18} />, value: '56', label: 'Test savoli' },
     { icon: <Users size={18} />, value: '∞', label: 'Mustaqil o\'rganish' },
   ]
 
@@ -50,7 +50,7 @@ export default function HomePage() {
 
           <p className="text-lg text-text-secondary max-w-2xl mx-auto mb-10 leading-relaxed">
             Raqamli texnologiyalar va innovatsiyalar bo'yicha zamonaviy kurs.
-            Sun'iy intellekt, blokcheyn, bulut hisoblash va boshqa 15 ta muhim mavzuni mustaqil o'rganing.
+            Raqamli texnologiyalar, bulut hisoblash va boshqa muhim 11 ta mavzuni hamda yakuniy amaliy loyihani o'zlashtiring.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -108,7 +108,7 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <Badge variant="cyan" className="mb-4 inline-flex">Kurs tarkibi</Badge>
-            <h2 className="text-3xl font-bold font-display text-text-primary mb-4">15 ta mavzu</h2>
+            <h2 className="text-3xl font-bold font-display text-text-primary mb-4">11 ta mavzu va Yakuniy loyiha</h2>
             <p className="text-text-secondary max-w-xl mx-auto">
               Zamonaviy raqamli texnologiyalarning barcha muhim sohalarini qamrab olgan keng qamrovli kurs
             </p>

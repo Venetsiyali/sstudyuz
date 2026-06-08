@@ -120,7 +120,7 @@ function buildStudentProgress(userId: string, courseId: string, rows: any[]): St
   const lessons = rows.map(rowToLessonProgress)
   const completedLessons = lessons.filter((l) => l.testPassed).length
   const totalPct = lessons.reduce((acc, l) => acc + (l.testPercentage ?? 0), 0)
-  const overallPercentage = Math.round(totalPct / 15)
+  const overallPercentage = Math.round(totalPct / 12)
   const startedAt = rows.reduce((min, r) => {
     const d = r.started_at || new Date().toISOString()
     return d < min ? d : min
