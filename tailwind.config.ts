@@ -35,8 +35,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
-        display: ['var(--font-noto-serif)', 'Georgia', 'serif'],
+        sans: ['"Times New Roman"', 'Times', 'serif'],
+        display: ['"Times New Roman"', 'Times', 'serif'],
         mono: ['var(--font-mono)', 'monospace'],
       },
       backgroundImage: {

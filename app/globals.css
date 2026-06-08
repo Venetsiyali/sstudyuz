@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --font-inter: 'Inter', system-ui, sans-serif;
-  --font-noto-serif: 'Noto Serif', Georgia, serif;
+  --font-inter: 'Times New Roman', Times, serif;
+  --font-noto-serif: 'Times New Roman', Times, serif;
 }
 
 * {
@@ -19,6 +19,7 @@ body {
   overflow-x: hidden;
   background-color: #FAFAF5;
   color: #2C3E50;
+  font-size: 105%;
 }
 
 /* Custom scrollbar */
