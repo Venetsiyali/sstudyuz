@@ -35,10 +35,10 @@ export default function AdminCharts() {
               <XAxis dataKey="month" tick={{ fill: '#475569', fontSize: 12 }} axisLine={false} tickLine={false} />
               <YAxis tick={{ fill: '#475569', fontSize: 12 }} axisLine={false} tickLine={false} />
               <Tooltip
-                contentStyle={{ background: '#0f1629', border: '1px solid #1e2d4a', borderRadius: 8, color: '#f1f5f9', fontSize: 12 }}
+                contentStyle={{ background: '#FFFFFF', border: '1px solid #D5D5C8', borderRadius: 8, color: '#2C3E50', fontSize: 12 }}
               />
-              <Bar dataKey="students" name="Talabalar" fill="#3b82f6" radius={[4, 4, 0, 0]} />
-              <Bar dataKey="tests" name="Testlar" fill="#8b5cf6" radius={[4, 4, 0, 0]} />
+              <Bar dataKey="students" name="Talabalar" fill="#1B4332" radius={[4, 4, 0, 0]} />
+              <Bar dataKey="tests" name="Testlar" fill="#B8860B" radius={[4, 4, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
         </CardContent>
@@ -67,10 +67,10 @@ export default function AdminCharts() {
                 ))}
               </Pie>
               <Legend
-                formatter={(value) => <span style={{ color: '#94a3b8', fontSize: 12 }}>{value}</span>}
+                formatter={(value) => <span style={{ color: '#5D6D7E', fontSize: 12 }}>{value}</span>}
               />
               <Tooltip
-                contentStyle={{ background: '#0f1629', border: '1px solid #1e2d4a', borderRadius: 8, color: '#f1f5f9', fontSize: 12 }}
+                contentStyle={{ background: '#FFFFFF', border: '1px solid #D5D5C8', borderRadius: 8, color: '#2C3E50', fontSize: 12 }}
               />
             </PieChart>
           </ResponsiveContainer>
@@ -104,7 +104,7 @@ export default function AdminCharts() {
                       <td className="py-2.5 text-text-primary font-medium">{s.name}</td>
                       <td className="py-2.5 text-text-secondary">{s.group}</td>
                       <td className="py-2.5 text-right text-text-secondary">{s.percentage}%</td>
-                      <td className="py-2.5 text-right font-bold text-blue-400">{s.grade}</td>
+                      <td className="py-2.5 text-right font-bold text-[#1B4332]">{s.grade}</td>
                     </tr>
                   ))}
                 </tbody>

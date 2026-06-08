@@ -80,7 +80,7 @@ export default function VideoPlayer({ videoUrl, title, onWatched }: VideoPlayerP
           >
             <div className="absolute inset-0 bg-grid opacity-30" />
             <div className="relative z-10 flex flex-col items-center gap-4">
-              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center shadow-glow-blue group-hover:scale-110 transition-transform duration-300">
+              <div className="w-20 h-20 rounded-full bg-[#1B4332] flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
                 <Play size={32} className="text-white ml-1" fill="white" />
               </div>
               <div className="text-center px-6">
@@ -115,7 +115,7 @@ export default function VideoPlayer({ videoUrl, title, onWatched }: VideoPlayerP
             href={watchUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="shrink-0 flex items-center gap-1.5 text-xs text-text-muted hover:text-blue-400 transition-colors"
+            className="shrink-0 flex items-center gap-1.5 text-xs text-text-muted hover:text-[#1B4332] transition-colors"
           >
             <ExternalLink size={13} />
             Tashqida ko'rish
@@ -131,7 +131,7 @@ export default function VideoPlayer({ videoUrl, title, onWatched }: VideoPlayerP
             href={watchUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-400 hover:underline"
+            className="text-[#1B4332] hover:underline"
           >
             shu yerda YouTube da oching
           </a>

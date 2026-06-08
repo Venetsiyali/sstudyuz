@@ -36,7 +36,7 @@ export default function LessonList({ lessons, currentLessonId, progress = [], co
         const isActive = lesson.id === currentLessonId
 
         const statusIcon = prog?.testPassed ? (
-          <CheckCircle2 size={16} className="text-emerald-400 shrink-0" />
+          <CheckCircle2 size={16} className="text-[#27AE60] shrink-0" />
         ) : unlocked ? (
           <Circle size={16} className="text-text-muted shrink-0" />
         ) : (
@@ -51,7 +51,7 @@ export default function LessonList({ lessons, currentLessonId, progress = [], co
                 className={cn(
                   'flex items-start gap-3 px-3 py-3 rounded-xl transition-all duration-200 group',
                   isActive
-                    ? 'bg-blue-500/10 border border-blue-500/20'
+                    ? 'bg-[#1B4332]/10 border border-[#1B4332]/20'
                     : 'hover:bg-surface-2 border border-transparent'
                 )}
               >
@@ -62,21 +62,21 @@ export default function LessonList({ lessons, currentLessonId, progress = [], co
                   <p
                     className={cn(
                       'text-sm font-medium leading-snug truncate',
-                      isActive ? 'text-blue-400' : 'text-text-primary group-hover:text-blue-400'
+                      isActive ? 'text-[#1B4332]' : 'text-text-primary group-hover:text-[#1B4332]'
                     )}
                   >
                     {lesson.title}
                   </p>
                   <div className="flex items-center gap-3 mt-1.5">
-                    <span className={cn('flex items-center gap-1 text-xs', prog?.videoWatched ? 'text-emerald-400' : 'text-text-muted')}>
+                    <span className={cn('flex items-center gap-1 text-xs', prog?.videoWatched ? 'text-[#27AE60]' : 'text-text-muted')}>
                       <PlayCircle size={11} />
                       Video
                     </span>
-                    <span className={cn('flex items-center gap-1 text-xs', prog?.lectureRead ? 'text-emerald-400' : 'text-text-muted')}>
+                    <span className={cn('flex items-center gap-1 text-xs', prog?.lectureRead ? 'text-[#27AE60]' : 'text-text-muted')}>
                       <BookOpen size={11} />
                       Ma'ruza
                     </span>
-                    <span className={cn('flex items-center gap-1 text-xs', prog?.testPassed ? 'text-emerald-400' : 'text-text-muted')}>
+                    <span className={cn('flex items-center gap-1 text-xs', prog?.testPassed ? 'text-[#27AE60]' : 'text-text-muted')}>
                       <ClipboardList size={11} />
                       Test {prog?.testPassed ? `${prog.testPercentage}%` : ''}
                     </span>

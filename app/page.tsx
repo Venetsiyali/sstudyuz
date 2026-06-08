@@ -10,10 +10,10 @@ import { LESSONS } from '@/lib/data'
 
 export default function HomePage() {
   const features = [
-    { icon: <Play size={20} className="text-blue-400" />, title: 'Video darslar', desc: '15 ta professional video ma\'ruza, jami 22+ soat kontent' },
-    { icon: <BookOpen size={20} className="text-purple-400" />, title: "Ma'ruza matnlari", desc: "Har bir mavzu bo'yicha batafsil ma'ruza matni va misollar" },
-    { icon: <ClipboardList size={20} className="text-cyan-400" />, title: 'Interaktiv testlar', desc: 'Har mavzudan 5 savol, natijalar va tushuntirishlar bilan' },
-    { icon: <Trophy size={20} className="text-yellow-400" />, title: 'Sertifikat', desc: "Kursni muvaffaqiyatli tugatgach elektron sertifikat olasiz" },
+    { icon: <Play size={20} className="text-[#1B4332]" />, title: 'Video darslar', desc: '15 ta professional video ma\'ruza, jami 22+ soat kontent' },
+    { icon: <BookOpen size={20} className="text-[#B8860B]" />, title: "Ma'ruza matnlari", desc: "Har bir mavzu bo'yicha batafsil ma'ruza matni va misollar" },
+    { icon: <ClipboardList size={20} className="text-[#1A5276]" />, title: 'Interaktiv testlar', desc: 'Har mavzudan 5 savol, natijalar va tushuntirishlar bilan' },
+    { icon: <Trophy size={20} className="text-[#D4A520]" />, title: 'Sertifikat', desc: "Kursni muvaffaqiyatli tugatgach elektron sertifikat olasiz" },
   ]
 
   const highlights = [
@@ -29,32 +29,28 @@ export default function HomePage() {
     { icon: <BookOpen size={18} />, value: '15', label: 'Mavzu' },
     { icon: <Play size={18} />, value: '22+', label: 'Soat video' },
     { icon: <ClipboardList size={18} />, value: '75', label: 'Test savoli' },
-    { icon: <Users size={18} />, value: 'TATU', label: 'Universiteti' },
+    { icon: <Users size={18} />, value: '∞', label: 'Mustaqil o\'rganish' },
   ]
 
   return (
     <div className="min-h-screen">
       {/* Hero */}
       <section className="relative overflow-hidden bg-grid py-24 px-4">
-        {/* Glow effects */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl pointer-events-none" />
-
         <div className="relative max-w-4xl mx-auto text-center">
           <Badge variant="blue" className="mb-6 inline-flex">
             <Star size={11} />
-            TATU — Raqamli Ta'lim Platformasi
+            M-ta'lim — Mustaqil ta'lim platformasi
           </Badge>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-display leading-tight mb-6">
-            <span className="text-text-primary">Raqamli Texnologiyalar</span>
+            <span className="text-text-primary">Mustaqil ta'lim</span>
             <br />
-            <span className="text-gradient">va Innovatsiyalar</span>
+            <span className="text-gradient">platformasi</span>
           </h1>
 
           <p className="text-lg text-text-secondary max-w-2xl mx-auto mb-10 leading-relaxed">
-            TATU talabalari uchun mo'ljallangan zamonaviy kurs. Sun'iy intellekt, blokcheyn,
-            bulut hisoblash va boshqa 15 ta muhim mavzuni o'rganing.
+            Raqamli texnologiyalar va innovatsiyalar bo'yicha zamonaviy kurs.
+            Sun'iy intellekt, blokcheyn, bulut hisoblash va boshqa 15 ta muhim mavzuni mustaqil o'rganing.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -74,9 +70,9 @@ export default function HomePage() {
           {/* Stats */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-16">
             {stats.map((s) => (
-              <div key={s.label} className="glass rounded-xl p-4 text-center">
-                <div className="flex justify-center mb-2 text-blue-400">{s.icon}</div>
-                <p className="text-2xl font-bold font-display text-gradient">{s.value}</p>
+              <div key={s.label} className="bg-surface border border-border rounded-xl p-4 text-center shadow-card">
+                <div className="flex justify-center mb-2 text-[#1B4332]">{s.icon}</div>
+                <p className="text-2xl font-bold font-display text-[#1B4332]">{s.value}</p>
                 <p className="text-xs text-text-muted mt-1">{s.label}</p>
               </div>
             ))}
@@ -112,7 +108,7 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <Badge variant="cyan" className="mb-4 inline-flex">Kurs tarkibi</Badge>
-            <h2 className="text-3xl font-bold font-display text-text-primary mb-4">15 ta Mavzu</h2>
+            <h2 className="text-3xl font-bold font-display text-text-primary mb-4">15 ta mavzu</h2>
             <p className="text-text-secondary max-w-xl mx-auto">
               Zamonaviy raqamli texnologiyalarning barcha muhim sohalarini qamrab olgan keng qamrovli kurs
             </p>
@@ -121,7 +117,7 @@ export default function HomePage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
             {LESSONS.map((lesson) => (
               <Card key={lesson.id} hover className="p-4 flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500/20 to-purple-500/20 border border-blue-500/20 flex items-center justify-center text-sm font-bold text-blue-400 shrink-0">
+                <div className="w-8 h-8 rounded-lg bg-[#1B4332]/10 border border-[#1B4332]/20 flex items-center justify-center text-sm font-bold text-[#1B4332] shrink-0">
                   {lesson.topicNumber}
                 </div>
                 <div className="min-w-0">
@@ -158,7 +154,7 @@ export default function HomePage() {
               <div className="space-y-3">
                 {highlights.map((h) => (
                   <div key={h} className="flex items-center gap-3">
-                    <CheckCircle2 size={16} className="text-emerald-400 shrink-0" />
+                    <CheckCircle2 size={16} className="text-[#27AE60] shrink-0" />
                     <span className="text-text-secondary">{h}</span>
                   </div>
                 ))}
@@ -175,10 +171,10 @@ export default function HomePage() {
 
             <div className="grid grid-cols-2 gap-4">
               {[
-                { icon: <Shield size={24} className="text-blue-400" />, title: 'Kiberxavfsizlik', bg: 'from-blue-500/10 to-blue-600/5' },
-                { icon: <Globe size={24} className="text-purple-400" />, title: 'Web texnologiyalar', bg: 'from-purple-500/10 to-purple-600/5' },
-                { icon: <Zap size={24} className="text-yellow-400" />, title: "Sun'iy intellekt", bg: 'from-yellow-500/10 to-yellow-600/5' },
-                { icon: <Trophy size={24} className="text-emerald-400" />, title: 'Sertifikat', bg: 'from-emerald-500/10 to-emerald-600/5' },
+                { icon: <Shield size={24} className="text-[#1B4332]" />, title: 'Kiberxavfsizlik', bg: 'from-[#1B4332]/10 to-[#1B4332]/5' },
+                { icon: <Globe size={24} className="text-[#B8860B]" />, title: 'Web texnologiyalar', bg: 'from-[#B8860B]/10 to-[#B8860B]/5' },
+                { icon: <Zap size={24} className="text-[#D4A520]" />, title: "Sun'iy intellekt", bg: 'from-[#D4A520]/10 to-[#D4A520]/5' },
+                { icon: <Trophy size={24} className="text-[#27AE60]" />, title: 'Sertifikat', bg: 'from-[#27AE60]/10 to-[#27AE60]/5' },
               ].map((item) => (
                 <Card key={item.title} className={`p-6 bg-gradient-to-br ${item.bg}`}>
                   <div className="mb-3">{item.icon}</div>
@@ -197,7 +193,7 @@ export default function HomePage() {
             Bugun boshlang
           </h2>
           <p className="text-text-secondary mb-8">
-            Bepul ro'yxatdan o'ting va raqamli texnologiyalar dunyosiga kiriting
+            Bepul ro'yxatdan o'ting va raqamli texnologiyalar dunyosiga kiring
           </p>
           <Link href="/auth/register">
             <Button size="lg">

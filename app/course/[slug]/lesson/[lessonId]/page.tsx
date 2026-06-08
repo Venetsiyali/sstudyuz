@@ -149,7 +149,7 @@ export default function LessonPage() {
       )}>
         <div className="p-4">
           <div className="mb-4">
-            <Link href={`/course/${slug}`} className="flex items-center gap-1.5 text-sm text-text-muted hover:text-blue-400 transition-colors">
+            <Link href={`/course/${slug}`} className="flex items-center gap-1.5 text-sm text-text-muted hover:text-[#1B4332] transition-colors">
               <ChevronLeft size={14} />
               Kursga qaytish
             </Link>

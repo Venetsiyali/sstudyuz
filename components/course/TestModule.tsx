@@ -88,8 +88,8 @@ export default function TestModule({ questions, lessonId, topicNumber, onComplet
   if (phase === 'intro') {
     return (
       <div className="flex flex-col items-center justify-center py-10 text-center">
-        <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500/20 to-purple-500/20 border border-blue-500/20 flex items-center justify-center mb-6">
-          <Trophy size={28} className="text-blue-400" />
+        <div className="w-16 h-16 rounded-2xl bg-[#1B4332]/10 border border-[#1B4332]/20 flex items-center justify-center mb-6">
+          <Trophy size={28} className="text-[#1B4332]" />
         </div>
         <h2 className="text-xl font-bold font-display text-text-primary mb-2">
           {topicNumber}-mavzu testi
@@ -118,7 +118,7 @@ export default function TestModule({ questions, lessonId, topicNumber, onComplet
         <div className={cn(
           'w-20 h-20 rounded-full flex items-center justify-center mb-6 text-3xl font-bold font-display',
           passed
-            ? 'bg-emerald-500/10 border-2 border-emerald-500/30 text-emerald-400'
+            ? 'bg-[#27AE60]/10 border-2 border-[#27AE60]/30 text-[#27AE60]'
             : 'bg-red-500/10 border-2 border-red-500/30 text-red-400'
         )}>
           {pct}%
@@ -134,9 +134,9 @@ export default function TestModule({ questions, lessonId, topicNumber, onComplet
         {/* Stats grid */}
         <div className="grid grid-cols-3 gap-3 w-full max-w-xs mb-8">
           {[
-            { label: 'Ball', value: `${score}/${questions.length}`, color: 'text-blue-400' },
+            { label: 'Ball', value: `${score}/${questions.length}`, color: 'text-[#1B4332]' },
             { label: 'Baho', value: grade, color: gradeColor(grade) },
-            { label: 'Natija', value: scoreLabel(pct), color: passed ? 'text-emerald-400' : 'text-red-400' },
+            { label: 'Natija', value: scoreLabel(pct), color: passed ? 'text-[#27AE60]' : 'text-red-400' },
           ].map((s) => (
             <div key={s.label} className="bg-surface-2 rounded-xl p-3 border border-border">
               <p className={cn('text-lg font-bold', s.color)}>{s.value}</p>
@@ -151,15 +151,15 @@ export default function TestModule({ questions, lessonId, topicNumber, onComplet
             const userAns = answers[i]
             const correct = userAns === q.correctIndex
             return (
-              <div key={q.id} className={cn('flex items-start gap-3 p-3 rounded-xl border', correct ? 'border-emerald-500/20 bg-emerald-500/5' : 'border-red-500/20 bg-red-500/5')}>
+              <div key={q.id} className={cn('flex items-start gap-3 p-3 rounded-xl border', correct ? 'border-[#27AE60]/20 bg-[#27AE60]/5' : 'border-red-500/20 bg-red-500/5')}>
                 {correct
-                  ? <CheckCircle2 size={16} className="text-emerald-400 shrink-0 mt-0.5" />
+                  ? <CheckCircle2 size={16} className="text-[#27AE60] shrink-0 mt-0.5" />
                   : <XCircle size={16} className="text-red-400 shrink-0 mt-0.5" />
                 }
                 <div className="min-w-0">
                   <p className="text-sm text-text-primary font-medium">{i + 1}. {q.text}</p>
                   {!correct && (
-                    <p className="text-xs text-emerald-400 mt-1">
+                    <p className="text-xs text-[#27AE60] mt-1">
                       To'g'ri: {q.options[q.correctIndex]}
                     </p>
                   )}
@@ -178,7 +178,7 @@ export default function TestModule({ questions, lessonId, topicNumber, onComplet
   }
 
   // ── Quiz ──
-  const timerColor = timeLeft < 60 ? 'text-red-400' : timeLeft < 120 ? 'text-yellow-400' : 'text-text-secondary'
+  const timerColor = timeLeft < 60 ? 'text-red-400' : timeLeft < 120 ? 'text-[#D4A520]' : 'text-text-secondary'
   const isCorrect = selected === currentQ.correctIndex
   const answeredCount = answers.filter((a) => a !== null).length
 
@@ -208,10 +208,10 @@ export default function TestModule({ questions, lessonId, topicNumber, onComplet
       {/* Options */}
       <div className="space-y-2.5">
         {currentQ.options.map((opt, i) => {
-          let style = 'border-border bg-surface-2 text-text-secondary hover:border-blue-500/40 hover:bg-blue-500/5'
-          if (selected === i && !revealed) style = 'border-blue-500/60 bg-blue-500/10 text-blue-300'
+          let style = 'border-border bg-surface-2 text-text-secondary hover:border-[#1B4332]/40 hover:bg-[#1B4332]/5'
+          if (selected === i && !revealed) style = 'border-[#1B4332]/60 bg-[#1B4332]/10 text-[#1B4332]'
           if (revealed) {
-            if (i === currentQ.correctIndex) style = 'border-emerald-500/60 bg-emerald-500/10 text-emerald-300'
+            if (i === currentQ.correctIndex) style = 'border-[#27AE60]/60 bg-[#27AE60]/10 text-[#27AE60]'
             else if (selected === i) style = 'border-red-500/60 bg-red-500/10 text-red-300'
             else style = 'border-border bg-surface-2 text-text-muted opacity-60'
           }
@@ -231,7 +231,7 @@ export default function TestModule({ questions, lessonId, topicNumber, onComplet
               </span>
               <span className="text-sm">{opt}</span>
               {revealed && i === currentQ.correctIndex && (
-                <CheckCircle2 size={14} className="text-emerald-400 ml-auto shrink-0" />
+                <CheckCircle2 size={14} className="text-[#27AE60] ml-auto shrink-0" />
               )}
               {revealed && selected === i && i !== currentQ.correctIndex && (
                 <XCircle size={14} className="text-red-400 ml-auto shrink-0" />
@@ -243,8 +243,8 @@ export default function TestModule({ questions, lessonId, topicNumber, onComplet
 
       {/* Explanation */}
       {revealed && currentQ.explanation && (
-        <div className="flex items-start gap-3 p-3.5 bg-blue-500/5 border border-blue-500/20 rounded-xl">
-          <AlertCircle size={16} className="text-blue-400 shrink-0 mt-0.5" />
+        <div className="flex items-start gap-3 p-3.5 bg-[#1B4332]/5 border border-[#1B4332]/20 rounded-xl">
+          <AlertCircle size={16} className="text-[#1B4332] shrink-0 mt-0.5" />
           <p className="text-sm text-text-secondary">{currentQ.explanation}</p>
         </div>
       )}

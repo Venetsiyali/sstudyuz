@@ -14,7 +14,7 @@ import { cn, gradeColor, gradeLabel, gradeFromPercentage, formatDate } from '@/l
 function CertificateModal({ user, pct, grade, onClose }: { user: any; pct: number; grade: string; onClose: () => void }) {
   const certRef = useRef<HTMLDivElement>(null)
   const today = new Date().toLocaleDateString('uz-UZ', { year: 'numeric', month: 'long', day: 'numeric' })
-  const certNumber = `TATU-SST-${new Date().getFullYear()}-${(user.studentId || user.email || '').slice(-6).toUpperCase().replace(/[^A-Z0-9]/g, '0')}`
+  const certNumber = `MT-${new Date().getFullYear()}-${(user.studentId || user.email || '').slice(-6).toUpperCase().replace(/[^A-Z0-9]/g, '0')}`
 
   const handlePrint = () => window.print()
 
@@ -34,7 +34,7 @@ function CertificateModal({ user, pct, grade, onClose }: { user: any; pct: numbe
       <div ref={certRef} id="certificate-print" className="certificate-container bg-white relative overflow-hidden" style={{ width: '900px', maxWidth: '95vw', aspectRatio: '1.414', maxHeight: '90vh' }}>
         {/* Watermark pattern */}
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23337ab7' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231B4332' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
         }} />
 
         {/* Outer decorative border */}
@@ -63,14 +63,11 @@ function CertificateModal({ user, pct, grade, onClose }: { user: any; pct: numbe
           </div>
 
           {/* University name */}
-          <p className="text-[10px] tracking-[0.3em] uppercase text-[#337ab7] font-semibold mb-1">
-            Muhammad al-Xorazmiy nomidagi
-          </p>
-          <h2 className="text-lg font-bold text-[#337ab7] tracking-wide mb-1" style={{ fontFamily: 'Georgia, serif' }}>
-            TOSHKENT AXBOROT TEXNOLOGIYALARI UNIVERSITETI
+          <h2 className="text-lg font-bold text-[#1B4332] tracking-wide mb-1" style={{ fontFamily: 'Georgia, serif' }}>
+            M-TA&apos;LIM
           </h2>
           <p className="text-[10px] tracking-[0.25em] uppercase text-[#555] mb-4">
-            S-STUDY — Raqamli Ta&apos;lim Platformasi
+            Mustaqil ta&apos;lim platformasi
           </p>
 
           {/* Decorative divider */}
@@ -108,7 +105,7 @@ function CertificateModal({ user, pct, grade, onClose }: { user: any; pct: numbe
           <p className="text-sm text-[#555] mb-2">ga quyidagi kursni muvaffaqiyatli tugatgani uchun berildi:</p>
 
           <div className="bg-[#f8f6f0] border border-[#e8e4d8] rounded-lg px-8 py-3 mb-4">
-            <p className="text-lg font-bold text-[#337ab7]" style={{ fontFamily: 'Georgia, serif' }}>
+            <p className="text-lg font-bold text-[#1B4332]" style={{ fontFamily: 'Georgia, serif' }}>
               &ldquo;Raqamli Texnologiyalar va Innovatsiyalar&rdquo;
             </p>
             <p className="text-[11px] text-[#999] mt-0.5">15 mavzu — Video darslar, ma&apos;ruzalar va testlar</p>
@@ -123,8 +120,8 @@ function CertificateModal({ user, pct, grade, onClose }: { user: any; pct: numbe
               <p className="text-[10px] text-[#999] uppercase tracking-wider">Umumiy ball</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-1" style={{ borderWidth: '3px', borderColor: '#337ab7', border: '3px solid #337ab7' }}>
-                <span className="text-2xl font-bold text-[#337ab7]" style={{ fontFamily: 'Georgia, serif' }}>{grade}</span>
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-1" style={{ borderWidth: '3px', borderColor: '#1B4332', border: '3px solid #1B4332' }}>
+                <span className="text-2xl font-bold text-[#1B4332]" style={{ fontFamily: 'Georgia, serif' }}>{grade}</span>
               </div>
               <p className="text-[10px] text-[#999] uppercase tracking-wider">Baho</p>
             </div>
@@ -146,7 +143,7 @@ function CertificateModal({ user, pct, grade, onClose }: { user: any; pct: numbe
                   <div className="w-16 h-16 rounded-full border border-[#b8860b]/30 flex items-center justify-center">
                     <div className="text-center">
                       <Award size={16} className="text-[#b8860b] mx-auto mb-0.5" />
-                      <p className="text-[7px] font-bold text-[#b8860b] leading-tight">TATU<br/>MUHR</p>
+                      <p className="text-[7px] font-bold text-[#b8860b] leading-tight">M-ta&apos;lim<br/>MUHR</p>
                     </div>
                   </div>
                 </div>
@@ -203,7 +200,7 @@ export default function ProfilePage() {
         {/* User info */}
         <Card className="p-6">
           <div className="flex items-center gap-4 mb-5">
-            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#337ab7] to-[#286090] flex items-center justify-center text-2xl font-bold text-white">
+            <div className="w-14 h-14 rounded-2xl bg-[#1B4332] flex items-center justify-center text-2xl font-bold text-white">
               {user.name?.[0]?.toUpperCase()}
             </div>
             <div>
@@ -279,7 +276,7 @@ export default function ProfilePage() {
                 Barcha <strong>15 mavzuni</strong> muvaffaqiyatli tugatdingiz. Sertifikatingiz tayyor!
               </p>
               <p className="text-xs text-[#999]">
-                Umumiy ball: <strong className="text-[#337ab7]">{pct}%</strong> — Baho: <strong className="text-[#337ab7]">{grade}</strong>
+                Umumiy ball: <strong className="text-[#1B4332]">{pct}%</strong> — Baho: <strong className="text-[#1B4332]">{grade}</strong>
               </p>
             </div>
 
@@ -308,7 +305,7 @@ export default function ProfilePage() {
                 .sort((a, b) => a.topicNumber - b.topicNumber)
                 .map((l) => (
                   <div key={l.lessonId} className="flex items-center gap-3 p-3 bg-surface-2 rounded-xl border border-border">
-                    <div className="w-7 h-7 rounded-lg bg-surface-3 border border-border flex items-center justify-center text-xs font-bold text-[#337ab7] shrink-0">
+                    <div className="w-7 h-7 rounded-lg bg-surface-3 border border-border flex items-center justify-center text-xs font-bold text-[#1B4332] shrink-0">
                       {l.topicNumber}
                     </div>
                     <div className="flex-1">

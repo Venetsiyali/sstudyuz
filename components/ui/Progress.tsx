@@ -26,7 +26,7 @@ export default function Progress({
       <div className={cn('w-full bg-surface-3 rounded-full overflow-hidden', heights[size])}>
         <div
           className={cn(
-            'h-full rounded-full transition-all duration-500 bg-gradient-to-r from-blue-500 to-purple-500',
+            'h-full rounded-full transition-all duration-500 bg-[#1B4332]',
             barClassName
           )}
           style={{ width: `${pct}%` }}

@@ -21,7 +21,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
       {/* Admin sidebar */}
       <aside className="w-56 shrink-0 border-r border-border bg-surface sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto hidden md:block">
         <div className="p-4">
-          <p className="text-xs font-semibold text-text-muted uppercase tracking-wider mb-3 px-2">Admin Panel</p>
+          <p className="text-xs font-semibold text-text-muted uppercase tracking-wider mb-3 px-2">Boshqaruv paneli</p>
           <nav className="space-y-1">
             {navItems.map((item) => (
               <Link

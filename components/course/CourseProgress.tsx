@@ -18,9 +18,9 @@ export default function CourseProgress({ progress, totalLessons = 15 }: CoursePr
   const testsPassed = progress?.lessons.filter((l) => l.testPassed).length ?? 0
 
   const stats = [
-    { icon: <CheckCircle2 size={14} />, label: 'Testlar', value: testsPassed, color: 'text-emerald-400' },
-    { icon: <BookOpen size={14} />, label: "Ma'ruzalar", value: lectureRead, color: 'text-blue-400' },
-    { icon: <ClipboardList size={14} />, label: 'Videolar', value: videoWatched, color: 'text-purple-400' },
+    { icon: <CheckCircle2 size={14} />, label: 'Testlar', value: testsPassed, color: 'text-[#27AE60]' },
+    { icon: <BookOpen size={14} />, label: "Ma'ruzalar", value: lectureRead, color: 'text-[#1B4332]' },
+    { icon: <ClipboardList size={14} />, label: 'Videolar', value: videoWatched, color: 'text-[#B8860B]' },
   ]
 
   return (
@@ -61,10 +61,10 @@ export default function CourseProgress({ progress, totalLessons = 15 }: CoursePr
 
       {/* Certificate hint */}
       {completed === totalLessons && (
-        <div className="bg-gradient-to-r from-yellow-500/10 to-orange-500/10 border border-yellow-500/20 rounded-xl p-4">
+        <div className="bg-gradient-to-r from-[#D4A520]/10 to-[#B8860B]/10 border border-[#D4A520]/20 rounded-xl p-4">
           <div className="flex items-center gap-2 mb-1">
-            <Trophy size={16} className="text-yellow-400" />
-            <span className="text-sm font-semibold text-yellow-400">Sertifikat tayyor!</span>
+            <Trophy size={16} className="text-[#D4A520]" />
+            <span className="text-sm font-semibold text-[#D4A520]">Sertifikat tayyor!</span>
           </div>
           <p className="text-xs text-text-secondary">Barcha mavzularni muvaffaqiyatli tugatdingiz.</p>
         </div>

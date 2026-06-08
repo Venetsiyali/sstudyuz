@@ -92,14 +92,14 @@ export default function AdminCoursesPage() {
       </div>
 
       {/* Course info card */}
-      <Card className="p-5 mb-6 bg-gradient-to-r from-blue-500/5 to-purple-500/5 border-blue-500/20">
+      <Card className="p-5 mb-6 bg-gradient-to-r from-[#1B4332]/5 to-[#B8860B]/5 border-[#1B4332]/20">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center">
-            <BookOpen size={20} className="text-blue-400" />
+          <div className="w-10 h-10 rounded-xl bg-[#1B4332]/10 flex items-center justify-center">
+            <BookOpen size={20} className="text-[#1B4332]" />
           </div>
           <div>
             <p className="font-bold text-text-primary font-display">Raqamli Texnologiyalar va Innovatsiyalar</p>
-            <p className="text-sm text-text-secondary">Asosiy kurs · TATU talabalari uchun</p>
+            <p className="text-sm text-text-secondary">Asosiy kurs · Barcha o'quvchilar uchun</p>
           </div>
           <div className="ml-auto flex gap-4 text-sm text-text-secondary">
             <span className="flex items-center gap-1"><BookOpen size={13} />{lessons.length} mavzu</span>
@@ -118,7 +118,7 @@ export default function AdminCoursesPage() {
               className="flex items-center gap-4 p-4 bg-surface border border-border rounded-xl hover:border-border-light transition-colors group"
             >
               {/* Number */}
-              <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-blue-500/20 to-purple-500/20 border border-blue-500/20 flex items-center justify-center text-sm font-bold text-blue-400 shrink-0">
+              <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-[#1B4332]/20 to-[#B8860B]/20 border border-[#1B4332]/20 flex items-center justify-center text-sm font-bold text-[#1B4332] shrink-0">
                 {lesson.topicNumber}
               </div>
 
@@ -171,7 +171,7 @@ export default function AdminCoursesPage() {
                 value={newForm.topicNumber}
                 onChange={(e) => handleNewChange('topicNumber', e.target.value)}
                 placeholder={String(lessons.length + 1)}
-                className="w-full px-3 py-2 bg-surface-2 border border-border rounded-xl text-sm text-text-primary placeholder-text-muted focus:outline-none focus:border-blue-500/50 transition-colors"
+                className="w-full px-3 py-2 bg-surface-2 border border-border rounded-xl text-sm text-text-primary placeholder-text-muted focus:outline-none focus:border-[#1B4332]/50 transition-colors"
               />
             </div>
             <div>
@@ -181,7 +181,7 @@ export default function AdminCoursesPage() {
                 value={newForm.videoDuration}
                 onChange={(e) => handleNewChange('videoDuration', e.target.value)}
                 placeholder="1:30:00"
-                className="w-full px-3 py-2 bg-surface-2 border border-border rounded-xl text-sm text-text-primary placeholder-text-muted focus:outline-none focus:border-blue-500/50 transition-colors"
+                className="w-full px-3 py-2 bg-surface-2 border border-border rounded-xl text-sm text-text-primary placeholder-text-muted focus:outline-none focus:border-[#1B4332]/50 transition-colors"
               />
             </div>
           </div>
@@ -193,7 +193,7 @@ export default function AdminCoursesPage() {
               value={newForm.title}
               onChange={(e) => handleNewChange('title', e.target.value)}
               placeholder="Masalan: Blokcheyn Texnologiyasi"
-              className="w-full px-3 py-2 bg-surface-2 border border-border rounded-xl text-sm text-text-primary placeholder-text-muted focus:outline-none focus:border-blue-500/50 transition-colors"
+              className="w-full px-3 py-2 bg-surface-2 border border-border rounded-xl text-sm text-text-primary placeholder-text-muted focus:outline-none focus:border-[#1B4332]/50 transition-colors"
             />
           </div>
 
@@ -204,7 +204,7 @@ export default function AdminCoursesPage() {
               value={newForm.slug}
               onChange={(e) => handleNewChange('slug', e.target.value)}
               placeholder="blokcheyn-texnologiyasi"
-              className="w-full px-3 py-2 bg-surface-2 border border-border rounded-xl text-sm text-text-primary placeholder-text-muted focus:outline-none focus:border-blue-500/50 transition-colors font-mono"
+              className="w-full px-3 py-2 bg-surface-2 border border-border rounded-xl text-sm text-text-primary placeholder-text-muted focus:outline-none focus:border-[#1B4332]/50 transition-colors font-mono"
             />
           </div>
 
@@ -215,7 +215,7 @@ export default function AdminCoursesPage() {
               value={newForm.description}
               onChange={(e) => handleNewChange('description', e.target.value)}
               placeholder="Qisqacha tavsif..."
-              className="w-full px-3 py-2 bg-surface-2 border border-border rounded-xl text-sm text-text-primary placeholder-text-muted focus:outline-none focus:border-blue-500/50 transition-colors"
+              className="w-full px-3 py-2 bg-surface-2 border border-border rounded-xl text-sm text-text-primary placeholder-text-muted focus:outline-none focus:border-[#1B4332]/50 transition-colors"
             />
           </div>
 
@@ -226,7 +226,7 @@ export default function AdminCoursesPage() {
               value={newForm.videoUrl}
               onChange={(e) => handleNewChange('videoUrl', e.target.value)}
               placeholder="https://www.youtube.com/embed/VIDEO_ID"
-              className="w-full px-3 py-2 bg-surface-2 border border-border rounded-xl text-sm text-text-primary placeholder-text-muted focus:outline-none focus:border-blue-500/50 transition-colors font-mono"
+              className="w-full px-3 py-2 bg-surface-2 border border-border rounded-xl text-sm text-text-primary placeholder-text-muted focus:outline-none focus:border-[#1B4332]/50 transition-colors font-mono"
             />
             <p className="text-xs text-text-muted mt-1">YouTube Embed URL: youtube.com/embed/VIDEO_ID</p>
           </div>

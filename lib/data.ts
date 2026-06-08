@@ -5,7 +5,7 @@ export const COURSE_DATA: Course = {
   title: 'Raqamli Texnologiyalar va Innovatsiyalar',
   slug: 'raqamli-texnologiyalar',
   description:
-    'TATU talabalari uchun mo\'ljallangan ushbu kurs raqamli texnologiyalar, sun\'iy intellekt, blokcheyn, bulut hisoblash va boshqa zamonaviy innovatsiyalar haqida chuqur bilim beradi.',
+    'Mustaqil o\'rganish uchun mo\'ljallangan ushbu kurs raqamli texnologiyalar, sun\'iy intellekt, blokcheyn, bulut hisoblash va boshqa zamonaviy innovatsiyalar haqida chuqur bilim beradi.',
   shortDesc: '15 ta mavzu bo\'yicha video darslar, ma\'ruza matnlari va testlar',
   thumbnail: '/images/course-thumb.jpg',
   totalLessons: 15,

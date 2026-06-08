@@ -86,7 +86,7 @@ export default function StudentsPage() {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Ism, email yoki guruh bo'yicha qidirish..."
-          className="w-full pl-10 pr-4 py-2.5 bg-surface border border-border rounded-xl text-sm text-text-primary placeholder-text-muted focus:outline-none focus:border-blue-500/50 transition-colors"
+          className="w-full pl-10 pr-4 py-2.5 bg-surface border border-border rounded-xl text-sm text-text-primary placeholder-text-muted focus:outline-none focus:border-[#1B4332]/50 transition-colors"
         />
       </div>
 
@@ -140,7 +140,7 @@ export default function StudentsPage() {
                   <tr key={s.id} className="border-b border-border/50 hover:bg-surface-2 transition-colors">
                     <td className="px-4 py-3">
                       <div className="flex items-center gap-2.5">
-                        <div className="w-7 h-7 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-xs font-bold shrink-0">
+                        <div className="w-7 h-7 rounded-full bg-[#1B4332] flex items-center justify-center text-white text-xs font-bold shrink-0">
                           {s.name[0]?.toUpperCase()}
                         </div>
                         <div>

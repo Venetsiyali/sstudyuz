@@ -22,10 +22,10 @@ export default async function AnalyticsPage() {
   const fullyCompleted = allProgress.filter((p) => p.completedLessons >= 15).length
 
   const summary = [
-    { label: 'Jami urinishlar', value: totalAttempts, icon: <TrendingUp size={18} />, color: 'text-blue-400', bg: 'bg-blue-500/10' },
-    { label: "O'tilgan testlar", value: totalTestsPassed, icon: <CheckCircle2 size={18} />, color: 'text-emerald-400', bg: 'bg-emerald-500/10' },
-    { label: "O'rtacha ball", value: `${avgPct}%`, icon: <Award size={18} />, color: 'text-yellow-400', bg: 'bg-yellow-500/10' },
-    { label: 'Kursni tugatgan', value: fullyCompleted, icon: <Users size={18} />, color: 'text-purple-400', bg: 'bg-purple-500/10' },
+    { label: 'Jami urinishlar', value: totalAttempts, icon: <TrendingUp size={18} />, color: 'text-[#1B4332]', bg: 'bg-[#1B4332]/10' },
+    { label: "O'tilgan testlar", value: totalTestsPassed, icon: <CheckCircle2 size={18} />, color: 'text-[#27AE60]', bg: 'bg-[#27AE60]/10' },
+    { label: "O'rtacha ball", value: `${avgPct}%`, icon: <Award size={18} />, color: 'text-[#D4A520]', bg: 'bg-[#D4A520]/10' },
+    { label: 'Kursni tugatgan', value: fullyCompleted, icon: <Users size={18} />, color: 'text-[#B8860B]', bg: 'bg-[#B8860B]/10' },
   ]
 
   return (

@@ -166,7 +166,7 @@ async function ensureSeeded() {
     await db.from('users').upsert([
       {
         id: 'admin-001',
-        email: 'admin@sstudy.uz',
+        email: 'admin@mtalim.uz',
         name: 'Admin Foydalanuvchi',
         password: adminHash,
         role: 'admin',
@@ -174,7 +174,7 @@ async function ensureSeeded() {
       },
       {
         id: 'student-001',
-        email: 'student@tatu.uz',
+        email: 'talaba@mtalim.uz',
         name: 'Demo Talaba',
         password: studentHash,
         role: 'student',

@@ -21,10 +21,10 @@ export default async function AdminPage() {
   }).length
 
   const stats = [
-    { label: 'Jami talabalar', value: students.length, icon: <Users size={20} />, color: 'text-blue-400', bg: 'bg-blue-500/10' },
-    { label: 'Faol (7 kun)', value: activeStudents, icon: <TrendingUp size={20} />, color: 'text-purple-400', bg: 'bg-purple-500/10' },
-    { label: 'O\'tilgan testlar', value: totalTestsPassed, icon: <CheckCircle2 size={20} />, color: 'text-emerald-400', bg: 'bg-emerald-500/10' },
-    { label: 'Kurslar', value: 1, icon: <BookOpen size={20} />, color: 'text-cyan-400', bg: 'bg-cyan-500/10' },
+    { label: 'Jami talabalar', value: students.length, icon: <Users size={20} />, color: 'text-[#1B4332]', bg: 'bg-[#1B4332]/10' },
+    { label: 'Faol (7 kun)', value: activeStudents, icon: <TrendingUp size={20} />, color: 'text-[#B8860B]', bg: 'bg-[#B8860B]/10' },
+    { label: 'O\'tilgan testlar', value: totalTestsPassed, icon: <CheckCircle2 size={20} />, color: 'text-[#27AE60]', bg: 'bg-[#27AE60]/10' },
+    { label: 'Kurslar', value: 1, icon: <BookOpen size={20} />, color: 'text-[#1A5276]', bg: 'bg-[#1A5276]/10' },
   ]
 
   return (
