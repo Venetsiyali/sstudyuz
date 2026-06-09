@@ -2,7 +2,7 @@ import { Course, Lesson, Question } from '@/types'
 
 export const COURSE_DATA: Course = {
   id: 'raqamli-texnologiyalar',
-  title: 'Raqamli Texnologiyalar va Innovatsiyalar',
+  title: 'Raqamli texnologiyalar va innovatsiyalar',
   slug: 'raqamli-texnologiyalar',
   description: 'Mustaqil o\'rganish uchun mo\'ljallangan ushbu kurs raqamli texnologiyalar, sun\'iy intellekt, blokcheyn, bulut hisoblash va boshqa zamonaviy innovatsiyalar haqida chuqur bilim beradi.',
   shortDesc: '11 ta mavzu bo\'yicha video darslar, ma\'ruza matnlari, testlar va Yakuniy loyiha',
@@ -49,7 +49,7 @@ export const LESSONS: Lesson[] = [
   {
     id: "lesson-4",
     topicNumber: 4,
-    title: "Raqamli platformalar va mikromobilitet. velosiped ijarasi va elektr skuterlar orqali shahar harakatlanish tizimini transformatsiya qilish",
+    title: "Raqamli platformalar va mikromobilitet. Velosiped ijarasi va elektr skuterlar orqali shahar harakatlanish tizimini transformatsiya qilish",
     slug: "mavzu-4",
     description: "Cloud computing asoslari, xizmat modellari va yetakchi provayderlar",
     videoUrl: "https://www.youtube.com/embed/YyNHJKjHxfk",
@@ -60,7 +60,7 @@ export const LESSONS: Lesson[] = [
   {
     id: "lesson-5",
     topicNumber: 5,
-    title: "Raqamli platformalar asosidagi ridehailing xizmatlari. Shahar transport tizimi va ekologiyaga ta'siri (Uber, Lyft, Yandex Go, Bolt) platformalari",
+    title: "Raqamli platformalar asosidagi ridehailing xizmatlari. Shahar transport tizimi va ekologiyaga ta'siri (uber, lyft, yandex go, bolt) platformalari",
     slug: "mavzu-5",
     description: "Kiberxavfsizlik tahdidlari, himoya usullari va xavfsiz dasturlash",
     videoUrl: "https://www.youtube.com/embed/eEkqiITGORs",
@@ -71,7 +71,7 @@ export const LESSONS: Lesson[] = [
   {
     id: "lesson-6",
     topicNumber: 6,
-    title: "Raqamli platformalarda “Gig work” ishlash: Tovarlar va xizmatlarning shahar bo'ylab harakati, ijtimoiy va ekologik ta'sirlar",
+    title: "Raqamli platformalarda “gig work” ishlash: tovarlar va xizmatlarning shahar bo'ylab harakati, ijtimoiy va ekologik ta'sirlar",
     slug: "mavzu-6",
     description: "Big Data texnologiyalari, Hadoop, Spark va ma'lumotlar tahlili usullari",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
@@ -93,7 +93,7 @@ export const LESSONS: Lesson[] = [
   {
     id: "lesson-8",
     topicNumber: 8,
-    title: "Raqamli platformalarda qisqa muddatli ijara: Uy-joy bozori, arzonlik va shahar boshqaruviga ta'siri",
+    title: "Raqamli platformalarda qisqa muddatli ijara: uy-joy bozori, arzonlik va shahar boshqaruviga ta'siri",
     slug: "mavzu-8",
     description: "iOS va Android dasturlash, React Native va Flutter texnologiyalari",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
@@ -104,7 +104,7 @@ export const LESSONS: Lesson[] = [
   {
     id: "lesson-9",
     topicNumber: 9,
-    title: "Aqlli uy texnologiyalari va Narsalar interneti (IoT). Shaxsiy makondagi raqamli nazorat va uning ijtimoiy-ekologik ta'siri",
+    title: "Aqlli uy texnologiyalari va narsalar interneti (IoT). Shaxsiy makondagi raqamli nazorat va uning ijtimoiy-ekologik ta'siri",
     slug: "mavzu-9",
     description: "Zamonaviy web texnologiyalar: React, Next.js, Node.js va REST API",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
@@ -137,13 +137,13 @@ export const LESSONS: Lesson[] = [
   {
     id: "lesson-12",
     topicNumber: 12,
-    title: "YAKUNIY SERTIFIKATLASH LOYIHASI TOPSHIRIG'I",
+    title: "Yakuniy sertifikatlash loyihasi topshirig'i",
     slug: "yakuniy-loyiha",
     description: "Sertifikat olish uchun yakuniy loyiha topshirig'i",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     videoDuration: "1:50:00",
     order: 12,
-    lectureText: "# YAKUNIY SERTIFIKATLASH LOYIHASI TOPSHIRIG'I\n\nLoyiha mavzusi: \"Aqlli, Adolatli va Barqaror Shahar: Yangi Avlod Raqamli Platformasi Konsepsiyasi\"\n\n## Loyihaning maqsadi:\nKurs davomida o'rganilgan barcha raqamli texnologiyalar (Bulutli hisoblash, AI, IoT, Kriptovalyuta) va ularning ijtimoiy-iqtisodiy ta'sirlarini (Gig iqtisodiyot, tengsizlik, ekologiya) amalda qo'llagan holda, zamonaviy shahar muammolaridan birini hal qiluvchi innovatsion raqamli platforma (startap) loyihasini ishlab chiqish.\n\n## LOYIHA BOSQICHLARI VA TALABLARI:\n\n### 1-qism: Platforma g'oyasi va Infratuzilmasi (M1, M2, M4, M5, M7, M8 - mavzular asosida)\n**G'oya:** Shahar transporti (mikromobilitet, ridehailing), yetkazib berish xizmati yoki qisqa muddatli ijara tizimidagi mavjud muammoni hal qiluvchi yangi platforma o'ylab toping.\n\n**Infratuzilma:** Ushbu platformaning ma'lumotlar bazasi va ishlash mexanizmi nima uchun Bulutli hisoblash (Cloud computing) texnologiyalariga asoslanishi kerakligini va uning 3 ta asosiy afzalligini asoslab bering.\n\n### 2-qism: Texnologik Integratsiya (M3, M9, M10 - mavzular asosida)\nTizimingiz qanday qilib quyidagi texnologiyalardan foydalanishini tushuntiring:\n- **IoT (Narsalar interneti):** Tizimingizdagi ob'ektlar (masalan, aqlli skuterlar, uylar yoki avtomobillar) qanday qilib raqamli nazorat qilinadi va ma'lumot almashadi?\n- **Sun'iy Intellekt (AI) va Algoritmlar:** Mijozlarga xizmat ko'rsatishda yoki narxlarni belgilashda AI qanday ishlaydi? Algoritm insonlarni kamsitmasligi va ijtimoiy fazoni adolatli shakllantirishi uchun qanday istisno mexanizmlari qo'llaniladi?\n- **Kriptovalyuta va To'lov:** Platformada blokcheyn yoki kriptovalyutadan to'lov tizimi (yoki sodiqlik bonuslari) sifatida foydalanish imkoniyatini tahlil qiling. Bunga ketadigan energiya talablari va ekologik oqibatlarini hisobga oling.\n\n### 3-qism: Ijtimoiy va Ekologik Tahlil (M6, M11 - mavzular asosida)\n- **\"Gig work\" va Ishchilar huquqi:** Platformangizda ishlovchi kuryerlar yoki haydovchilarning (Gig workers) ijtimoiy himoyasini qanday ta'minlaysiz?\n- **Tizimli ta'sir:** Siz yaratgan texnologiya jamiyatdagi ijtimoiy tengsizlikni va hududiy farqlarni (masalan, markaz va chekka tumanlar o'rtasidagi) kuchaytirib yubormasligi uchun qanday chora-tadbirlar ko'rasiz? Platformaning shahar ekologiyasiga (uglerod izi) ta'siri qanday bo'ladi?\n\n## TOPSHIRISH SHAKLI VA QOIDALARI:\n- **Yozma hisobot (Biznes reja/Tahlil):** Loyiha yuqoridagi 3 ta qismni to'liq qamrab olgan holda, akademik va professional tilda (Word yoki PDF formatida, kamida 5-7 bet) yozilishi shart.\n- **Taqdimot (Pitch Deck):** Loyiha g'oyasini himoya qilish uchun 10-12 ta slayddan iborat taqdimot (PowerPoint) tayyorlanishi kerak.\n\n## SERTIFIKAT BERISH MEZONLARI:\nTalaba muvaffaqiyatli o'tishi va Maxsus Sertifikatga ega bo'lishi uchun loyiha quyidagi mezonlarga javob berishi kerak:\n1. **Komplekslik (30%):** Barcha 11 ta mavzudagi bilimlar loyihada o'zaro mantiqiy bog'langan bo'lishi.\n2. **Innovatsiya va Amaliylik (30%):** Taklif qilinayotgan g'oyaning real hayotda, shahar sharoitida qo'llash mumkinligi.\n3. **Tanqidiy fikrlash (40%):** Texnologiyaning nafaqat yutug'i, balki ijtimoiy-ekologik zararlarini ko'ra bilishi va unga yechim bera olishi.\n\n> Eslatma: Loyiha belgilangan muddatda topshirilib, taqdimot komissiya (yoki o'qituvchi) oldida muvaffaqiyatli himoya qilinganidan so'ng, talabaga kursni to'liq o'zlashtirganini tasdiqlovchi sertifikat taqdim etiladi. Avtomatik sertifikat olishingiz uchun pastdagi testda himoya qilganingizni tasdiqlang.\n"
+    lectureText: "# Yakuniy sertifikatlash loyihasi topshirig'i\n\nLoyiha mavzusi: \"Aqlli, Adolatli va Barqaror Shahar: Yangi Avlod Raqamli Platformasi Konsepsiyasi\"\n\n## Loyihaning maqsadi:\nKurs davomida o'rganilgan barcha raqamli texnologiyalar (Bulutli hisoblash, AI, IoT, Kriptovalyuta) va ularning ijtimoiy-iqtisodiy ta'sirlarini (Gig iqtisodiyot, tengsizlik, ekologiya) amalda qo'llagan holda, zamonaviy shahar muammolaridan birini hal qiluvchi innovatsion raqamli platforma (startap) loyihasini ishlab chiqish.\n\n## LOYIHA BOSQICHLARI VA TALABLARI:\n\n### 1-qism: Platforma g'oyasi va Infratuzilmasi (M1, M2, M4, M5, M7, M8 - mavzular asosida)\n**G'oya:** Shahar transporti (mikromobilitet, ridehailing), yetkazib berish xizmati yoki qisqa muddatli ijara tizimidagi mavjud muammoni hal qiluvchi yangi platforma o'ylab toping.\n\n**Infratuzilma:** Ushbu platformaning ma'lumotlar bazasi va ishlash mexanizmi nima uchun Bulutli hisoblash (Cloud computing) texnologiyalariga asoslanishi kerakligini va uning 3 ta asosiy afzalligini asoslab bering.\n\n### 2-qism: Texnologik Integratsiya (M3, M9, M10 - mavzular asosida)\nTizimingiz qanday qilib quyidagi texnologiyalardan foydalanishini tushuntiring:\n- **IoT (Narsalar interneti):** Tizimingizdagi ob'ektlar (masalan, aqlli skuterlar, uylar yoki avtomobillar) qanday qilib raqamli nazorat qilinadi va ma'lumot almashadi?\n- **Sun'iy Intellekt (AI) va Algoritmlar:** Mijozlarga xizmat ko'rsatishda yoki narxlarni belgilashda AI qanday ishlaydi? Algoritm insonlarni kamsitmasligi va ijtimoiy fazoni adolatli shakllantirishi uchun qanday istisno mexanizmlari qo'llaniladi?\n- **Kriptovalyuta va To'lov:** Platformada blokcheyn yoki kriptovalyutadan to'lov tizimi (yoki sodiqlik bonuslari) sifatida foydalanish imkoniyatini tahlil qiling. Bunga ketadigan energiya talablari va ekologik oqibatlarini hisobga oling.\n\n### 3-qism: Ijtimoiy va Ekologik Tahlil (M6, M11 - mavzular asosida)\n- **\"Gig work\" va Ishchilar huquqi:** Platformangizda ishlovchi kuryerlar yoki haydovchilarning (Gig workers) ijtimoiy himoyasini qanday ta'minlaysiz?\n- **Tizimli ta'sir:** Siz yaratgan texnologiya jamiyatdagi ijtimoiy tengsizlikni va hududiy farqlarni (masalan, markaz va chekka tumanlar o'rtasidagi) kuchaytirib yubormasligi uchun qanday chora-tadbirlar ko'rasiz? Platformaning shahar ekologiyasiga (uglerod izi) ta'siri qanday bo'ladi?\n\n## TOPSHIRISH SHAKLI VA QOIDALARI:\n- **Yozma hisobot (Biznes reja/Tahlil):** Loyiha yuqoridagi 3 ta qismni to'liq qamrab olgan holda, akademik va professional tilda (Word yoki PDF formatida, kamida 5-7 bet) yozilishi shart.\n- **Taqdimot (Pitch Deck):** Loyiha g'oyasini himoya qilish uchun 10-12 ta slayddan iborat taqdimot (PowerPoint) tayyorlanishi kerak.\n\n## SERTIFIKAT BERISH MEZONLARI:\nTalaba muvaffaqiyatli o'tishi va Maxsus Sertifikatga ega bo'lishi uchun loyiha quyidagi mezonlarga javob berishi kerak:\n1. **Komplekslik (30%):** Barcha 11 ta mavzudagi bilimlar loyihada o'zaro mantiqiy bog'langan bo'lishi.\n2. **Innovatsiya va Amaliylik (30%):** Taklif qilinayotgan g'oyaning real hayotda, shahar sharoitida qo'llash mumkinligi.\n3. **Tanqidiy fikrlash (40%):** Texnologiyaning nafaqat yutug'i, balki ijtimoiy-ekologik zararlarini ko'ra bilishi va unga yechim bera olishi.\n\n> Eslatma: Loyiha belgilangan muddatda topshirilib, taqdimot komissiya (yoki o'qituvchi) oldida muvaffaqiyatli himoya qilinganidan so'ng, talabaga kursni to'liq o'zlashtirganini tasdiqlovchi sertifikat taqdim etiladi. Avtomatik sertifikat olishingiz uchun pastdagi testda himoya qilganingizni tasdiqlang.\n"
   },
 ];
 
