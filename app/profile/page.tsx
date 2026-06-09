@@ -190,7 +190,7 @@ export default function ProfilePage() {
   const pct = progress?.overallPercentage ?? 0
   const grade = gradeFromPercentage(pct)
   const completed = progress?.completedLessons ?? 0
-  const allDone = completed >= 15
+  const allDone = completed >= 12
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
@@ -241,7 +241,7 @@ export default function ProfilePage() {
           <Progress value={pct} showLabel className="mb-4" />
           <div className="grid grid-cols-2 gap-3 text-center">
             <div className="bg-surface-2 rounded-xl p-3 border border-border">
-              <p className="text-lg font-bold text-text-primary">{completed}/15</p>
+              <p className="text-lg font-bold text-text-primary">{completed}/12</p>
               <p className="text-xs text-text-muted">Mavzular</p>
             </div>
             <div className="bg-surface-2 rounded-xl p-3 border border-border">
@@ -273,7 +273,7 @@ export default function ProfilePage() {
                 🎓 Tabriklaymiz!
               </h3>
               <p className="text-sm text-[#666] mb-1">
-                Barcha <strong>15 mavzuni</strong> muvaffaqiyatli tugatdingiz. Sertifikatingiz tayyor!
+                Barcha <strong>12 mavzuni</strong> muvaffaqiyatli tugatdingiz. Sertifikatingiz tayyor!
               </p>
               <p className="text-xs text-[#999]">
                 Umumiy ball: <strong className="text-[#1B4332]">{pct}%</strong> — Baho: <strong className="text-[#1B4332]">{grade}</strong>
