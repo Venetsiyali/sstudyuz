@@ -5,7 +5,6 @@ import { getServerSession } from 'next-auth'
 import { authOptions } from '@/lib/auth'
 import { saveTestAttempt, updateLessonProgress, getTestAttempts } from '@/lib/store'
 import Groq from 'groq-sdk'
-const pdfParse = require('pdf-parse')
 import mammoth from 'mammoth'
 
 const groq = new Groq({
@@ -33,6 +32,7 @@ export async function POST(req: NextRequest) {
     let text = ''
 
     if (file.type === 'application/pdf' || file.name.endsWith('.pdf')) {
+      const pdfParse = require('pdf-parse')
       const pdfData = await pdfParse(buffer)
       text = pdfData.text
     } else if (file.type === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' || file.name.endsWith('.docx')) {

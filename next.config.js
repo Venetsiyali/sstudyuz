@@ -4,7 +4,7 @@ const nextConfig = {
     domains: ['img.youtube.com', 'i.ytimg.com'],
   },
   experimental: {
-    serverComponentsExternalPackages: ['bcryptjs'],
+    serverComponentsExternalPackages: ['bcryptjs', 'pdf-parse', 'mammoth'],
   },
   env: {
     NEXTAUTH_URL: process.env.VERCEL_URL
