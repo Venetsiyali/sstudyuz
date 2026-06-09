@@ -36,7 +36,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-text-secondary hover:text-[#1B4332] transition-colors"
+                    className="text-sm text-text-secondary hover:text-primary transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -52,7 +52,7 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:info@mtalim.uz"
-                  className="flex items-center gap-2 text-sm text-text-secondary hover:text-[#1B4332] transition-colors"
+                  className="flex items-center gap-2 text-sm text-text-secondary hover:text-primary transition-colors"
                 >
                   <Mail size={14} />
                   info@mtalim.uz

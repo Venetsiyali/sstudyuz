@@ -54,8 +54,8 @@ export default function LoginPage() {
         </div>
 
         {/* Demo hint */}
-        <div className="mb-5 p-3.5 bg-[#1B4332]/5 border border-[#1B4332]/20 rounded-xl text-xs text-text-secondary space-y-1">
-          <p className="font-semibold text-[#1B4332]">Demo hisoblar:</p>
+        <div className="mb-5 p-3.5 bg-primary/5 border border-primary/20 rounded-xl text-xs text-text-secondary space-y-1">
+          <p className="font-semibold text-primary">Demo hisoblar:</p>
           <p>Admin: <span className="text-text-primary">admin@mtalim.uz / admin123</span></p>
           <p>Talaba: <span className="text-text-primary">talaba@mtalim.uz / student123</span></p>
         </div>
@@ -71,7 +71,7 @@ export default function LoginPage() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="email@mtalim.uz"
                 required
-                className="w-full px-4 py-2.5 bg-surface-2 border border-border rounded-xl text-sm text-text-primary placeholder-text-muted focus:outline-none focus:border-[#1B4332]/50 focus:bg-surface-3 transition-colors"
+                className="w-full px-4 py-2.5 bg-surface-2 border border-border rounded-xl text-sm text-text-primary placeholder-text-muted focus:outline-none focus:border-primary/50 focus:bg-surface-3 transition-colors"
               />
             </div>
 
@@ -84,7 +84,7 @@ export default function LoginPage() {
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••"
                   required
-                  className="w-full px-4 py-2.5 pr-10 bg-surface-2 border border-border rounded-xl text-sm text-text-primary placeholder-text-muted focus:outline-none focus:border-[#1B4332]/50 focus:bg-surface-3 transition-colors"
+                  className="w-full px-4 py-2.5 pr-10 bg-surface-2 border border-border rounded-xl text-sm text-text-primary placeholder-text-muted focus:outline-none focus:border-primary/50 focus:bg-surface-3 transition-colors"
                 />
                 <button
                   type="button"
@@ -110,7 +110,7 @@ export default function LoginPage() {
 
           <p className="mt-5 text-center text-sm text-text-muted">
             Hisobingiz yo'qmi?{' '}
-            <Link href="/auth/register" className="text-[#1B4332] hover:text-[#2D6A4F] font-medium">
+            <Link href="/auth/register" className="text-primary hover:text-[#2D6A4F] font-medium">
               Ro'yxatdan o'ting
             </Link>
           </p>

@@ -74,7 +74,7 @@ export default function RegisterPage() {
                   onChange={set(f.id)}
                   placeholder={f.placeholder}
                   required={f.required}
-                  className="w-full px-4 py-2.5 bg-surface-2 border border-border rounded-xl text-sm text-text-primary placeholder-text-muted focus:outline-none focus:border-[#1B4332]/50 focus:bg-surface-3 transition-colors"
+                  className="w-full px-4 py-2.5 bg-surface-2 border border-border rounded-xl text-sm text-text-primary placeholder-text-muted focus:outline-none focus:border-primary/50 focus:bg-surface-3 transition-colors"
                 />
               </div>
             ))}
@@ -90,7 +90,7 @@ export default function RegisterPage() {
                   onChange={set('password')}
                   placeholder="Kamida 6 belgi"
                   required
-                  className="w-full px-4 py-2.5 pr-10 bg-surface-2 border border-border rounded-xl text-sm text-text-primary placeholder-text-muted focus:outline-none focus:border-[#1B4332]/50 focus:bg-surface-3 transition-colors"
+                  className="w-full px-4 py-2.5 pr-10 bg-surface-2 border border-border rounded-xl text-sm text-text-primary placeholder-text-muted focus:outline-none focus:border-primary/50 focus:bg-surface-3 transition-colors"
                 />
                 <button
                   type="button"
@@ -116,7 +116,7 @@ export default function RegisterPage() {
 
           <p className="mt-5 text-center text-sm text-text-muted">
             Hisobingiz bormi?{' '}
-            <Link href="/auth/login" className="text-[#1B4332] hover:text-[#2D6A4F] font-medium">
+            <Link href="/auth/login" className="text-primary hover:text-[#2D6A4F] font-medium">
               Kirish
             </Link>
           </p>

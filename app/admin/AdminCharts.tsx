@@ -104,7 +104,7 @@ export default function AdminCharts() {
                       <td className="py-2.5 text-text-primary font-medium">{s.name}</td>
                       <td className="py-2.5 text-text-secondary">{s.group}</td>
                       <td className="py-2.5 text-right text-text-secondary">{s.percentage}%</td>
-                      <td className="py-2.5 text-right font-bold text-[#1B4332]">{s.grade}</td>
+                      <td className="py-2.5 text-right font-bold text-primary">{s.grade}</td>
                     </tr>
                   ))}
                 </tbody>

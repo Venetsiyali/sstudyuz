@@ -19,7 +19,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         'bg-primary hover:bg-primary-dark text-white border border-accent-copper shadow-[inset_0_1px_4px_rgba(212,175,55,0.4)] hover:shadow-[0_0_15px_rgba(6,95,70,0.5)] focus:ring-primary-light',
       secondary:
         'bg-accent-copper hover:bg-accent-copper-light text-[#0f172a] border border-primary shadow-[inset_0_1px_2px_rgba(255,255,255,0.4)] hover:shadow-[0_0_15px_rgba(184,115,51,0.5)] focus:ring-accent-copper',
-      ghost: 'hover:bg-surface-2 text-text-secondary hover:text-text-primary focus:ring-[#1B4332]',
+      ghost: 'hover:bg-surface-2 text-text-secondary hover:text-text-primary focus:ring-primary',
       danger:
         'bg-red-600/10 hover:bg-red-600/20 text-red-400 border border-red-600/20 hover:border-red-500/40 focus:ring-red-500',
       success:

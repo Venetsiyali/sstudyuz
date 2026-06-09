@@ -81,7 +81,7 @@ export default function ProjectSubmission({ courseId, lessonId, topicNumber, onC
   return (
     <div className="max-w-2xl mx-auto py-6">
       <div className="text-center mb-8">
-        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#1B4332]/10 text-[#1B4332] mb-4">
+        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-4">
           <UploadCloud size={28} />
         </div>
         <h2 className="text-2xl font-bold font-display text-text-primary">Yakuniy Loyihani Topshirish</h2>
@@ -100,7 +100,7 @@ export default function ProjectSubmission({ courseId, lessonId, topicNumber, onC
         </div>
       )}
 
-      <div className="bg-surface-2 border-2 border-dashed border-border rounded-2xl p-8 text-center transition-colors hover:border-[#1B4332]/40 relative">
+      <div className="bg-surface-2 border-2 border-dashed border-border rounded-2xl p-8 text-center transition-colors hover:border-primary/40 relative">
         <input
           type="file"
           accept=".pdf,.docx,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
@@ -111,7 +111,7 @@ export default function ProjectSubmission({ courseId, lessonId, topicNumber, onC
         
         {file ? (
           <div className="flex flex-col items-center gap-3 pointer-events-none">
-            <div className="w-12 h-12 rounded-xl bg-white border border-border flex items-center justify-center text-[#B8860B]">
+            <div className="w-12 h-12 rounded-xl bg-surface-3 border border-border flex items-center justify-center text-accent-copper">
               <FileText size={24} />
             </div>
             <div>
@@ -121,7 +121,7 @@ export default function ProjectSubmission({ courseId, lessonId, topicNumber, onC
           </div>
         ) : (
           <div className="flex flex-col items-center gap-3 pointer-events-none">
-            <div className="w-12 h-12 rounded-xl bg-white border border-border flex items-center justify-center text-text-muted">
+            <div className="w-12 h-12 rounded-xl bg-surface-3 border border-border flex items-center justify-center text-text-muted">
               <UploadCloud size={24} />
             </div>
             <div>

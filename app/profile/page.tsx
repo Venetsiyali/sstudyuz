@@ -22,10 +22,10 @@ function CertificateModal({ user, pct, grade, onClose }: { user: any; pct: numbe
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4" style={{ backgroundColor: 'rgba(0,0,0,0.7)' }}>
       {/* Close + Actions bar */}
       <div className="absolute top-4 right-4 flex items-center gap-2 no-print z-[110]">
-        <button onClick={handlePrint} className="flex items-center gap-2 bg-white text-gray-700 px-4 py-2 rounded-lg shadow-lg hover:bg-gray-50 transition text-sm font-medium">
+        <button onClick={handlePrint} className="flex items-center gap-2 bg-surface-2 text-text-primary px-4 py-2 rounded-lg shadow-lg hover:bg-surface-3 transition text-sm font-medium border border-border">
           <Printer size={16} /> Chop etish
         </button>
-        <button onClick={onClose} className="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center text-gray-600 hover:bg-white hover:text-gray-900 transition shadow-lg">
+        <button onClick={onClose} className="w-10 h-10 bg-surface-2/90 rounded-full flex items-center justify-center text-text-secondary hover:bg-surface-3 hover:text-text-primary transition shadow-lg border border-border">
           <X size={20} />
         </button>
       </div>
@@ -63,9 +63,9 @@ function CertificateModal({ user, pct, grade, onClose }: { user: any; pct: numbe
           </div>
 
           {/* University name */}
-          <h2 className="text-3xl font-bold text-[#1B4332] tracking-widest mb-1 uppercase" style={{ fontFamily: '"Times New Roman", Times, serif' }}>
+          <p className="text-sm font-medium text-[#666] tracking-widest uppercase mb-6" style={{ fontFamily: '"Times New Roman", Times, serif' }}>
             M-ta'lim
-          </h2>
+          </p>
           <p className="text-xs tracking-[0.25em] uppercase text-[#555] mb-6" style={{ fontFamily: '"Times New Roman", Times, serif' }}>
             Mustaqil ta'lim platformasi
           </p>
@@ -81,10 +81,10 @@ function CertificateModal({ user, pct, grade, onClose }: { user: any; pct: numbe
           <h1 className="text-5xl font-bold tracking-wider text-[#1a1a1a] mb-2" style={{ fontFamily: '"Times New Roman", Times, serif', letterSpacing: '0.15em' }}>
             SERTIFIKAT
           </h1>
-          <p className="text-xs tracking-[0.2em] uppercase text-[#999] mb-6" style={{ fontFamily: '"Times New Roman", Times, serif' }}>Certificate of Completion</p>
+          <p className="text-xs tracking-[0.2em] uppercase text-[#666] mb-6" style={{ fontFamily: '"Times New Roman", Times, serif' }}>Certificate of Completion</p>
 
           {/* Body text */}
-          <p className="text-base text-[#555] mb-2" style={{ fontFamily: '"Times New Roman", Times, serif' }}>Ushbu sertifikat</p>
+          <p className="text-sm text-[#666] mb-8" style={{ fontFamily: '"Times New Roman", Times, serif' }}>Ushbu sertifikat</p>
 
           {/* Student name */}
           <div className="relative mb-2 mt-1">
@@ -105,10 +105,12 @@ function CertificateModal({ user, pct, grade, onClose }: { user: any; pct: numbe
           <p className="text-base text-[#555] mb-4" style={{ fontFamily: '"Times New Roman", Times, serif' }}>ga quyidagi kursni muvaffaqiyatli tugatgani uchun berildi:</p>
 
           <div className="bg-[#f8f6f0] border border-[#e8e4d8] rounded-xl px-12 py-5 mb-5 w-full max-w-3xl text-center shadow-sm">
-            <p className="text-2xl font-bold text-[#1B4332]" style={{ fontFamily: '"Times New Roman", Times, serif' }}>
-              "Raqamli texnologiyalar va innovatsiyalar"
+            <h2 className="text-2xl font-bold text-[#1a1a1a] mb-2" style={{ fontFamily: '"Times New Roman", Times, serif' }}>
+              &quot;Raqamli texnologiyalar va innovatsiyalar&quot;
+            </h2>
+            <p className="text-sm text-[#666] leading-relaxed max-w-xl mx-auto" style={{ fontFamily: '"Times New Roman", Times, serif' }}>
+              o'quv dasturining barcha shartlarini bajardi va yakuniy amaliy loyihani muvaffaqiyatli himoya qildi.
             </p>
-            <p className="text-sm text-[#777] mt-2 italic" style={{ fontFamily: '"Times New Roman", Times, serif' }}>11 ta mavzu va yakuniy amaliy loyiha himoyasi</p>
           </div>
 
           {/* Score badges */}
@@ -121,9 +123,9 @@ function CertificateModal({ user, pct, grade, onClose }: { user: any; pct: numbe
             </div>
             <div className="text-center">
               <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-1.5" style={{ borderWidth: '3px', borderColor: '#1B4332' }}>
-                <span className="text-2xl font-bold text-[#1B4332]" style={{ fontFamily: '"Times New Roman", Times, serif' }}>{grade}</span>
+                <span className="text-2xl font-bold text-primary" style={{ fontFamily: '"Times New Roman", Times, serif' }}>{grade}</span>
               </div>
-              <p className="text-[10px] text-[#999] uppercase tracking-wider" style={{ fontFamily: '"Times New Roman", Times, serif' }}>Baho</p>
+              <p className="text-[10px] text-text-muted uppercase tracking-wider" style={{ fontFamily: '"Times New Roman", Times, serif' }}>Baho</p>
             </div>
           </div>
 
@@ -133,7 +135,7 @@ function CertificateModal({ user, pct, grade, onClose }: { user: any; pct: numbe
               {/* Date */}
               <div className="text-center w-32">
                 <p className="text-sm text-[#1a1a1a] font-medium mb-1" style={{ fontFamily: '"Times New Roman", Times, serif' }}>{today}</p>
-                <div className="h-px w-full bg-[#333] mb-1" />
+                <div className="h-px w-full bg-[#e5e7eb] mb-1" />
                 <p className="text-[11px] text-[#999] uppercase tracking-wider mt-1.5" style={{ fontFamily: '"Times New Roman", Times, serif' }}>Sana</p>
               </div>
 
@@ -152,7 +154,7 @@ function CertificateModal({ user, pct, grade, onClose }: { user: any; pct: numbe
               {/* Signature */}
               <div className="text-center w-32">
                 <p className="text-sm text-[#1a1a1a] font-medium mb-1 italic" style={{ fontFamily: '"Times New Roman", Times, serif' }}>O'qituvchi</p>
-                <div className="h-px w-full bg-[#333] mb-1" />
+                <div className="h-px w-full bg-[#e5e7eb] mb-1" />
                 <p className="text-[11px] text-[#999] uppercase tracking-wider mt-1.5" style={{ fontFamily: '"Times New Roman", Times, serif' }}>Imzo</p>
               </div>
             </div>
@@ -160,7 +162,7 @@ function CertificateModal({ user, pct, grade, onClose }: { user: any; pct: numbe
 
           {/* Certificate number */}
           <div className="mt-3 flex items-center gap-2">
-            <p className="text-[9px] text-[#bbb] tracking-wider">Sertifikat raqami: {certNumber}</p>
+            <p className="text-[9px] text-[#999] tracking-wider">Sertifikat raqami: {certNumber}</p>
           </div>
         </div>
       </div>
@@ -200,7 +202,7 @@ export default function ProfilePage() {
         {/* User info */}
         <Card className="p-6">
           <div className="flex items-center gap-4 mb-5">
-            <div className="w-14 h-14 rounded-2xl bg-[#1B4332] flex items-center justify-center text-2xl font-bold text-white">
+            <div className="w-14 h-14 rounded-2xl bg-primary flex items-center justify-center text-2xl font-bold text-white">
               {user.name?.[0]?.toUpperCase()}
             </div>
             <div>
@@ -269,14 +271,14 @@ export default function ProfilePage() {
             </div>
 
             <div className="flex-1 text-center sm:text-left">
-              <h3 className="text-xl font-bold text-[#1a1a1a] mb-1" style={{ fontFamily: 'Georgia, serif' }}>
+              <h3 className="text-xl font-bold text-text-primary mb-1" style={{ fontFamily: 'Georgia, serif' }}>
                 🎓 Tabriklaymiz!
               </h3>
-              <p className="text-sm text-[#666] mb-1">
+              <p className="text-sm text-text-secondary mb-1">
                 Barcha <strong>12 mavzuni</strong> muvaffaqiyatli tugatdingiz. Sertifikatingiz tayyor!
               </p>
-              <p className="text-xs text-[#999]">
-                Umumiy ball: <strong className="text-[#1B4332]">{pct}%</strong> — Baho: <strong className="text-[#1B4332]">{grade}</strong>
+              <p className="text-xs text-text-muted">
+                Umumiy ball: <strong className="text-primary">{pct}%</strong> — Baho: <strong className="text-primary">{grade}</strong>
               </p>
             </div>
 
@@ -305,7 +307,7 @@ export default function ProfilePage() {
                 .sort((a, b) => a.topicNumber - b.topicNumber)
                 .map((l) => (
                   <div key={l.lessonId} className="flex items-center gap-3 p-3 bg-surface-2 rounded-xl border border-border">
-                    <div className="w-7 h-7 rounded-lg bg-surface-3 border border-border flex items-center justify-center text-xs font-bold text-[#1B4332] shrink-0">
+                    <div className="w-7 h-7 rounded-lg bg-surface-3 border border-border flex items-center justify-center text-xs font-bold text-primary shrink-0">
                       {l.topicNumber}
                     </div>
                     <div className="flex-1">

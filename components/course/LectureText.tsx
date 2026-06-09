@@ -58,7 +58,7 @@ export default function LectureText({ content, title, onRead }: LectureTextProps
             li: ({ children }) => <li className="leading-relaxed">{children}</li>,
             code: ({ inline, children }: any) =>
               inline ? (
-                <code className="bg-surface-3 text-[#1B4332] px-1.5 py-0.5 rounded text-sm font-mono">
+                <code className="bg-surface-3 text-primary px-1.5 py-0.5 rounded text-sm font-mono">
                   {children}
                 </code>
               ) : (
@@ -70,7 +70,7 @@ export default function LectureText({ content, title, onRead }: LectureTextProps
               </pre>
             ),
             blockquote: ({ children }) => (
-              <blockquote className="border-l-4 border-[#1B4332] pl-4 my-4 text-text-secondary italic">
+              <blockquote className="border-l-4 border-primary pl-4 my-4 text-text-secondary italic">
                 {children}
               </blockquote>
             ),
@@ -94,7 +94,7 @@ export default function LectureText({ content, title, onRead }: LectureTextProps
               <tr className="hover:bg-surface-2 transition-colors">{children}</tr>
             ),
             a: ({ href, children }) => (
-              <a href={href} className="text-[#1B4332] hover:text-[#2D6A4F] underline" target="_blank" rel="noopener noreferrer">
+              <a href={href} className="text-primary hover:text-[#2D6A4F] underline" target="_blank" rel="noopener noreferrer">
                 {children}
               </a>
             ),

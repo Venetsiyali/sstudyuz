@@ -41,10 +41,10 @@ export default async function CoursePage({ params }: Props) {
               <p className="text-text-secondary leading-relaxed mb-6">{COURSE_DATA.description}</p>
 
               <div className="flex flex-wrap gap-4 text-sm text-text-secondary">
-                <span className="flex items-center gap-1.5"><BookOpen size={14} className="text-[#1B4332]" />{lessons.length} mavzu</span>
-                <span className="flex items-center gap-1.5"><Clock size={14} className="text-[#B8860B]" />{COURSE_DATA.totalDuration}</span>
-                <span className="flex items-center gap-1.5"><Users size={14} className="text-[#1A5276]" />Barcha o&apos;quvchilar</span>
-                <span className="flex items-center gap-1.5"><Star size={14} className="text-[#D4A520]" />Sertifikat</span>
+                <span className="flex items-center gap-1.5"><BookOpen size={14} className="text-primary" />{lessons.length} mavzu</span>
+                <span className="flex items-center gap-1.5"><Clock size={14} className="text-accent-copper" />{COURSE_DATA.totalDuration}</span>
+                <span className="flex items-center gap-1.5"><Users size={14} className="text-blue-600" />Barcha o&apos;quvchilar</span>
+                <span className="flex items-center gap-1.5"><Star size={14} className="text-accent-copper-light" />Sertifikat</span>
               </div>
 
               <div className="mt-6">

@@ -1,6 +1,7 @@
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
+  darkMode: 'class',
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -9,28 +10,26 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: '#0f172a', // slate navy
-        surface: 'rgba(30, 41, 59, 0.6)', // slate-800 with opacity for frosted glass
-        'surface-2': '#1e293b',
-        'surface-3': '#334155',
-        border: 'rgba(255, 255, 255, 0.1)',
-        'border-light': 'rgba(255, 255, 255, 0.15)',
+        background: 'var(--bg-color)',
+        surface: 'var(--surface-color)',
+        'surface-2': 'var(--surface-2-color)',
+        'surface-3': 'var(--surface-3-color)',
+        border: 'var(--border-color)',
+        'border-light': 'var(--border-light-color)',
         primary: {
-          DEFAULT: '#065f46', // deep emerald green
-          dark: '#047857',
-          light: '#10b981',
+          DEFAULT: 'var(--primary)',
+          dark: 'var(--primary-dark)',
+          light: 'var(--primary-light)',
         },
         accent: {
-          copper: '#b87333', // warm copper
-          'copper-light': '#d4af37', // warm gold
-          emerald: '#065f46',
-          blue: '#1A5276',
-          warm: '#8B4513',
+          copper: 'var(--accent-copper)',
+          'copper-light': 'var(--accent-copper-light)',
+          emerald: 'var(--primary)',
         },
         text: {
-          primary: '#fdfbf7', // off-white
-          secondary: '#cbd5e1', // slate-300
-          muted: '#94a3b8', // slate-400
+          primary: 'var(--text-primary)',
+          secondary: 'var(--text-secondary)',
+          muted: 'var(--text-muted)',
         },
       },
       fontFamily: {
@@ -40,9 +39,9 @@ const config: Config = {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'hero-gradient': 'linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(6, 95, 70, 0.1) 50%, rgba(15, 23, 42, 0.95) 100%)',
+        'hero-gradient': 'linear-gradient(135deg, var(--bg-color) 0%, rgba(6, 95, 70, 0.1) 50%, var(--bg-color) 100%)',
         'card-gradient': 'linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%)',
-        'emerald-copper': 'linear-gradient(135deg, #065f46 0%, #b87333 100%)',
+        'emerald-copper': 'linear-gradient(135deg, var(--primary) 0%, var(--accent-copper) 100%)',
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
@@ -65,10 +64,9 @@ const config: Config = {
         },
       },
       boxShadow: {
-        'card': '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
-        'card-hover': '0 8px 32px 0 rgba(6, 95, 70, 0.25)', // Emerald glow
-        'nav': '0 4px 30px rgba(0, 0, 0, 0.5)',
-        'glow': 'inset 0 0 10px rgba(212, 175, 55, 0.3)', // gold glow
+        'card': '0 8px 32px 0 rgba(0, 0, 0, 0.1)',
+        'nav': '0 4px 30px rgba(0, 0, 0, 0.05)',
+        'glow': 'inset 0 0 10px rgba(212, 175, 55, 0.3)',
       },
       borderRadius: {
         'xl': '1rem',

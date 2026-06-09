@@ -7,8 +7,7 @@ import { usePathname } from 'next/navigation'
 import { LayoutDashboard, LogOut, User, ChevronDown } from 'lucide-react'
 import { useState } from 'react'
 import { cn } from '@/lib/utils'
-
-
+import { ThemeToggle } from '@/components/ui/ThemeToggle'
 
 export default function Navbar() {
   const { data: session } = useSession()
@@ -73,8 +72,9 @@ export default function Navbar() {
             )}
           </nav>
 
-          {/* User menu */}
+          {/* User menu and Theme toggle */}
           <div className="flex items-center gap-3">
+            <ThemeToggle />
             {session ? (
               <div className="relative">
                 <button
