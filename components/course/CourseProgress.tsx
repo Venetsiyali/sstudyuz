@@ -19,7 +19,7 @@ export default function CourseProgress({ progress, totalLessons = 12 }: CoursePr
 
   const stats = [
     { icon: <CheckCircle2 size={14} />, label: 'Testlar', value: testsPassed, color: 'text-emerald-600' },
-    { icon: <BookOpen size={14} />, label: "Ma'ruzalar", value: lectureRead, color: 'text-primary' },
+    { icon: <BookOpen size={14} />, label: "Ma’ruzalar", value: lectureRead, color: 'text-primary' },
     { icon: <ClipboardList size={14} />, label: 'Videolar', value: videoWatched, color: 'text-accent-copper' },
   ]
 

@@ -24,7 +24,7 @@ export async function POST(req: NextRequest) {
     const topicNumber = parseInt(formData.get('topicNumber') as string)
 
     if (!file || !courseId || !lessonId || !topicNumber) {
-      return NextResponse.json({ error: "Barcha ma'lumotlar to'liq emas" }, { status: 400 })
+      return NextResponse.json({ error: "Barcha ma’lumotlar to‘liq emas" }, { status: 400 })
     }
 
     const arrayBuffer = await file.arrayBuffer()
@@ -43,22 +43,22 @@ export async function POST(req: NextRequest) {
     }
 
     if (!text || text.trim().length < 100) {
-      return NextResponse.json({ error: "Fayl ichidagi matn juda qisqa yoki bo'sh" }, { status: 400 })
+      return NextResponse.json({ error: "Fayl ichidagi matn juda qisqa yoki bo‘sh" }, { status: 400 })
     }
 
     // Call Groq API
-    const prompt = `Sen M-ta'lim platformasidagi qattiqqo'l o'qituvchisan. 
+    const prompt = `Sen M-ta’lim platformasidagi qattiqqo‘l o‘qituvchisan. 
 Talaba "Aqlli, Adolatli va Barqaror Shahar: Yangi Avlod Raqamli Platformasi Konsepsiyasi" mavzusida yakuniy loyiha topshirdi.
-Loyihada quyidagilar bo'lishi shart:
-1. G'oya va Bulutli hisoblash infratuzilmasi (3 ta afzalligi bilan).
+Loyihada quyidagilar bo‘lishi shart:
+1. G‘oya va Bulutli hisoblash infratuzilmasi (3 ta afzalligi bilan).
 2. IoT, AI (algoritmik istisno mexanizmlari bilan) va Kriptovalyuta (ekologik oqibatini hisobga olgan) texnologiyalaridan qanday foydalanishi tushuntirilishi.
-3. Gig work huquqi, ijtimoiy tengsizlik va shahar ekologiyasiga ta'sirining tahlili.
+3. Gig work huquqi, ijtimoiy tengsizlik va shahar ekologiyasiga ta’sirining tahlili.
 
-Quyida talaba yuklagan loyihaning matni berilgan. Uni o'qib, bahola.
-Agar talaba ushbu shartlarni mantiqan qamrab olgan bo'lsa va real loyiha yozgan bo'lsa, "passed": true qaytar va uning yutuqlari va kamchiliklari haqida "feedback" yoz (O'zbek tilida, professional tarzda).
-Agar matn butunlay boshqa mavzuda bo'lsa, shartlarga umuman javob bermasa yoki o'ta qisqa/sifatsiz bo'lsa, "passed": false qaytar va nima uchun yiqilganini "feedback" orqali tushuntir.
+Quyida talaba yuklagan loyihaning matni berilgan. Uni o‘qib, bahola.
+Agar talaba ushbu shartlarni mantiqan qamrab olgan bo‘lsa va real loyiha yozgan bo‘lsa, "passed": true qaytar va uning yutuqlari va kamchiliklari haqida "feedback" yoz (O‘zbek tilida, professional tarzda).
+Agar matn butunlay boshqa mavzuda bo‘lsa, shartlarga umuman javob bermasa yoki o‘ta qisqa/sifatsiz bo‘lsa, "passed": false qaytar va nima uchun yiqilganini "feedback" orqali tushuntir.
 
-QAYTARISHING KERAK BO'LGAN FORMAT (Faqat JSON):
+QAYTARISHING KERAK BO‘LGAN FORMAT (Faqat JSON):
 {
   "passed": boolean,
   "feedback": "string"
@@ -79,7 +79,7 @@ TALABA LOYIHASI MATNI:
     try {
       aiResult = JSON.parse(aiResponseStr)
     } catch (e) {
-      aiResult = { passed: false, feedback: "AI javobini o'qishda xatolik yuz berdi." }
+      aiResult = { passed: false, feedback: "AI javobini o‘qishda xatolik yuz berdi." }
     }
 
     const { passed, feedback } = aiResult

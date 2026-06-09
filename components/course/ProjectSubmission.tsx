@@ -86,7 +86,7 @@ export default function ProjectSubmission({ courseId, lessonId, topicNumber, onC
         </div>
         <h2 className="text-2xl font-bold font-display text-text-primary">Yakuniy Loyihani Topshirish</h2>
         <p className="text-sm text-text-secondary mt-2">
-          Tayyorlagan Word yoki PDF faylingizni shu yerga yuklang. Sun'iy intellekt uni tekshirib, darhol baholaydi.
+          Tayyorlagan Word yoki PDF faylingizni shu yerga yuklang. Sun’iy intellekt uni tekshirib, darhol baholaydi.
         </p>
       </div>
 

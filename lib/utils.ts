@@ -26,10 +26,10 @@ export function gradeColor(grade: string): string {
 
 export function gradeLabel(grade: string): string {
   const labels: Record<string, string> = {
-    A: "A'lo (90-100%)",
+    A: "A’lo (90-100%)",
     B: "Yaxshi (75-89%)",
     C: "Qoniqarli (60-74%)",
-    D: "O'rtacha (50-59%)",
+    D: "O‘rtacha (50-59%)",
     F: "Qoniqarsiz (<50%)",
   }
   return labels[grade] ?? grade
@@ -60,10 +60,10 @@ export function formatDateTime(iso: string): string {
 }
 
 export function scoreLabel(pct: number): string {
-  if (pct >= 90) return "A'lo"
+  if (pct >= 90) return "A’lo"
   if (pct >= 75) return 'Yaxshi'
   if (pct >= 60) return 'Qoniqarli'
-  if (pct >= 50) return "O'rtacha"
+  if (pct >= 50) return "O‘rtacha"
   return 'Qoniqarsiz'
 }
 

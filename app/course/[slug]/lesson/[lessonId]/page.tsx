@@ -116,7 +116,7 @@ export default function LessonPage() {
     { id: 'grade', label: 'Natija', icon: <Trophy size={14} /> },
   ] : [
     { id: 'video', label: 'Video', icon: <Play size={14} /> },
-    { id: 'lecture', label: "Ma'ruza", icon: <BookOpen size={14} /> },
+    { id: 'lecture', label: "Ma’ruza", icon: <BookOpen size={14} /> },
     { id: 'test', label: 'Test', icon: <ClipboardList size={14} /> },
     { id: 'grade', label: 'Natija', icon: <Trophy size={14} /> },
   ]
@@ -185,7 +185,7 @@ export default function LessonPage() {
           <div className="mb-6">
             <div className="flex items-center gap-2 mb-2">
               <Badge variant={isProject ? "purple" : "blue"}>{isProject ? 'Yakuniy Loyiha' : lesson.topicNumber + '-mavzu'}</Badge>
-              {lessonProg?.testPassed && <Badge variant="green">O'tildi</Badge>}
+              {lessonProg?.testPassed && <Badge variant="green">O‘tildi</Badge>}
             </div>
             <h1 className="text-xl font-bold font-display text-text-primary">{lesson.title}</h1>
             <p className="text-sm text-text-secondary mt-1">{lesson.description}</p>

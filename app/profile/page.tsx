@@ -58,16 +58,16 @@ function CertificateModal({ user, pct, grade, onClose }: { user: any; pct: numbe
           {/* Top decorative line */}
           <div className="flex items-center justify-center w-full gap-4 mb-4">
             <div className="h-px w-32 bg-gradient-to-r from-transparent to-[#b8860b]" />
-            <img src="/logo.png" alt="M-ta'lim Logo" className="w-20 h-20 object-contain drop-shadow-sm" />
+            <img src="/logo.png" alt="M-ta’lim Logo" className="w-20 h-20 object-contain drop-shadow-sm" />
             <div className="h-px w-32 bg-gradient-to-l from-transparent to-[#b8860b]" />
           </div>
 
           {/* University name */}
           <p className="text-sm font-medium text-[#666] tracking-widest uppercase mb-6" style={{ fontFamily: '"Times New Roman", Times, serif' }}>
-            M-ta'lim
+            M-ta’lim
           </p>
           <p className="text-xs tracking-[0.25em] uppercase text-[#555] mb-6" style={{ fontFamily: '"Times New Roman", Times, serif' }}>
-            Mustaqil ta'lim platformasi
+            Mustaqil ta’lim platformasi
           </p>
 
           {/* Decorative divider */}
@@ -109,7 +109,7 @@ function CertificateModal({ user, pct, grade, onClose }: { user: any; pct: numbe
               &quot;Raqamli texnologiyalar va innovatsiyalar&quot;
             </h2>
             <p className="text-sm text-[#666] leading-relaxed max-w-xl mx-auto" style={{ fontFamily: '"Times New Roman", Times, serif' }}>
-              o'quv dasturining barcha shartlarini bajardi va yakuniy amaliy loyihani muvaffaqiyatli himoya qildi.
+              o‘quv dasturining barcha shartlarini bajardi va yakuniy amaliy loyihani muvaffaqiyatli himoya qildi.
             </p>
           </div>
 
@@ -145,7 +145,7 @@ function CertificateModal({ user, pct, grade, onClose }: { user: any; pct: numbe
                   <div className="w-20 h-20 rounded-full border-2 border-[#b8860b]/40 flex items-center justify-center">
                     <div className="text-center">
                       <Award size={22} className="text-[#b8860b] mx-auto mb-1" />
-                      <p className="text-[9px] font-bold text-[#b8860b] leading-tight" style={{ fontFamily: '"Times New Roman", Times, serif', letterSpacing: '0.1em' }}>M-ta'lim<br/>MUHR</p>
+                      <p className="text-[9px] font-bold text-[#b8860b] leading-tight" style={{ fontFamily: '"Times New Roman", Times, serif', letterSpacing: '0.1em' }}>M-ta’lim<br/>MUHR</p>
                     </div>
                   </div>
                 </div>
@@ -153,7 +153,7 @@ function CertificateModal({ user, pct, grade, onClose }: { user: any; pct: numbe
 
               {/* Signature */}
               <div className="text-center w-32">
-                <p className="text-sm text-[#1a1a1a] font-medium mb-1 italic" style={{ fontFamily: '"Times New Roman", Times, serif' }}>O'qituvchi</p>
+                <p className="text-sm text-[#1a1a1a] font-medium mb-1 italic" style={{ fontFamily: '"Times New Roman", Times, serif' }}>O‘qituvchi</p>
                 <div className="h-px w-full bg-[#e5e7eb] mb-1" />
                 <p className="text-[11px] text-[#999] uppercase tracking-wider mt-1.5" style={{ fontFamily: '"Times New Roman", Times, serif' }}>Imzo</p>
               </div>

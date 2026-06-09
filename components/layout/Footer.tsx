@@ -12,14 +12,14 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <Link href="/" className="flex items-center gap-2.5 mb-4">
-              <Image src="/logo.png" alt="M-ta'lim" width={150} height={48} className="h-10 w-auto object-contain" />
+              <Image src="/logo.png" alt="M-ta’lim" width={150} height={48} className="h-10 w-auto object-contain" />
             </Link>
             <p className="text-sm text-text-secondary leading-relaxed max-w-xs">
-              Mustaqil ta'lim platformasi — bilim olish endi yanada qulay va samarali.
+              Mustaqil ta’lim platformasi — bilim olish endi yanada qulay va samarali.
             </p>
             <div className="flex items-center gap-2 mt-4 text-sm text-text-muted">
               <MapPin size={14} />
-              <span>Toshkent, O'zbekiston</span>
+              <span>Toshkent, O‘zbekiston</span>
             </div>
           </div>
 
@@ -31,7 +31,7 @@ export default function Footer() {
                 { href: '/', label: 'Bosh sahifa' },
                 { href: '/course/raqamli-texnologiyalar', label: 'Kurs' },
                 { href: '/auth/login', label: 'Kirish' },
-                { href: '/auth/register', label: "Ro'yxatdan o'tish" },
+                { href: '/auth/register', label: "Ro‘yxatdan o‘tish" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -64,10 +64,10 @@ export default function Footer() {
 
         <div className="mt-8 pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-text-muted">
-            © {new Date().getFullYear()} M-ta'lim. Barcha huquqlar himoyalangan.
+            © {new Date().getFullYear()} M-ta’lim. Barcha huquqlar himoyalangan.
           </p>
           <p className="text-xs text-text-muted">
-            Mustaqil ta'lim platformasi
+            Mustaqil ta’lim platformasi
           </p>
         </div>
       </div>

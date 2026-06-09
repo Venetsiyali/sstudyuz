@@ -17,11 +17,11 @@ export default function LectureText({ content, title, onRead }: LectureTextProps
     <div className="w-full">
       {/* Toolbar */}
       <div className="flex items-center justify-between mb-6 no-print">
-        <h2 className="text-lg font-semibold text-text-primary font-display">Ma'ruza matni</h2>
+        <h2 className="text-lg font-semibold text-text-primary font-display">Ma’ruza matni</h2>
         <div className="flex items-center gap-2">
           {onRead && (
             <Button variant="secondary" size="sm" onClick={onRead}>
-              O'qib bo'ldim
+              O‘qib bo‘ldim
             </Button>
           )}
           <Button variant="ghost" size="sm" onClick={handlePrint}>

@@ -139,11 +139,11 @@ let _seeded = false
 
 async function ensureSeeded() {
   if (_seeded) return
-  _seeded = true // set early so concurrent calls don't double-seed
+  _seeded = true // set early so concurrent calls don’t double-seed
   try {
     const db = getDb()
     const { count, error } = await db.from('lessons').select('*', { count: 'exact', head: true })
-    // If table doesn't exist or already has data, skip seeding
+    // If table doesn’t exist or already has data, skip seeding
     if (error || (count ?? 0) > 0) return
 
   // Seed lessons — ignoreDuplicates:true means NEVER overwrite admin edits
@@ -222,7 +222,7 @@ export async function createUser(data: {
   await ensureSeeded()
   const db = getDb()
   const { data: existing } = await db.from('users').select('id').eq('email', data.email).maybeSingle()
-  if (existing) throw new Error("Bu email allaqachon ro'yxatdan o'tgan")
+  if (existing) throw new Error("Bu email allaqachon ro‘yxatdan o‘tgan")
 
   const hashed = await bcrypt.hash(data.password, 10)
   const row = {

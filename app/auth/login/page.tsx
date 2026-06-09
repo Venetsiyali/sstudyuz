@@ -32,7 +32,7 @@ export default function LoginPage() {
     setLoading(false)
 
     if (res?.error) {
-      setError("Email yoki parol noto'g'ri")
+      setError("Email yoki parol noto‘g'ri")
     } else {
       router.push('/course/raqamli-texnologiyalar')
       router.refresh()
@@ -47,10 +47,10 @@ export default function LoginPage() {
         {/* Logo */}
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center mb-4">
-            <Image src="/logo.png" alt="M-ta'lim" width={200} height={64} className="h-16 w-auto object-contain" />
+            <Image src="/logo.png" alt="M-ta’lim" width={200} height={64} className="h-16 w-auto object-contain" />
           </div>
           <h1 className="text-2xl font-bold font-display text-text-primary">Kirish</h1>
-          <p className="text-sm text-text-muted mt-1">M-ta'lim platformasiga xush kelibsiz</p>
+          <p className="text-sm text-text-muted mt-1">M-ta’lim platformasiga xush kelibsiz</p>
         </div>
 
         {/* Demo hint */}
@@ -109,9 +109,9 @@ export default function LoginPage() {
           </form>
 
           <p className="mt-5 text-center text-sm text-text-muted">
-            Hisobingiz yo'qmi?{' '}
+            Hisobingiz yo‘qmi?{' '}
             <Link href="/auth/register" className="text-primary hover:text-[#2D6A4F] font-medium">
-              Ro'yxatdan o'ting
+              Ro‘yxatdan o‘ting
             </Link>
           </p>
         </div>

@@ -95,7 +95,7 @@ export default function TestModule({ questions, lessonId, topicNumber, onComplet
           {topicNumber}-mavzu testi
         </h2>
         <p className="text-text-secondary text-sm mb-6 max-w-sm">
-          {questions.length} ta savol · 5 daqiqa · O'tish uchun 60% kerak
+          {questions.length} ta savol · 5 daqiqa · O‘tish uchun 60% kerak
         </p>
         {bestScore !== undefined && bestScore > 0 && (
           <div className="mb-6 px-4 py-2.5 bg-surface-2 rounded-xl border border-border">
@@ -128,7 +128,7 @@ export default function TestModule({ questions, lessonId, topicNumber, onComplet
           {passed ? 'Tabriklaymiz!' : "Harakat qiling!"}
         </h2>
         <p className="text-text-secondary text-sm mb-6">
-          {score}/{questions.length} to'g'ri javob · {formatDuration(timeTaken)} sarflandi
+          {score}/{questions.length} to‘g'ri javob · {formatDuration(timeTaken)} sarflandi
         </p>
 
         {/* Stats grid */}
@@ -160,7 +160,7 @@ export default function TestModule({ questions, lessonId, topicNumber, onComplet
                   <p className="text-sm text-text-primary font-medium">{i + 1}. {q.text}</p>
                   {!correct && (
                     <p className="text-xs text-emerald-600 mt-1">
-                      To'g'ri: {q.options[q.correctIndex]}
+                      To‘g'ri: {q.options[q.correctIndex]}
                     </p>
                   )}
                 </div>

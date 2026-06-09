@@ -24,8 +24,8 @@ export const metadata: Metadata = {
     template: '%s | M-ta\'lim',
   },
   description:
-    "Mustaqil ta'lim platformasi. Raqamli texnologiyalar va innovatsiyalar bo'yicha 15 mavzu, video darslar, ma'ruzalar va testlar.",
-  keywords: ['M-ta\'lim', 'mustaqil ta\'lim', 'raqamli texnologiyalar', 'online kurs', "ta'lim", "o'zbek"],
+    "Mustaqil ta’lim platformasi. Raqamli texnologiyalar va innovatsiyalar bo‘yicha 15 mavzu, video darslar, ma’ruzalar va testlar.",
+  keywords: ['M-ta\'lim', 'mustaqil ta\'lim', 'raqamli texnologiyalar', 'online kurs', "ta’lim", "o‘zbek"],
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -279,7 +279,7 @@ export default function LessonEditPage() {
       {tab === 'info' && (
         <Card>
           <CardHeader>
-            <h2 className="font-semibold text-text-primary font-display">Mavzu ma'lumotlari</h2>
+            <h2 className="font-semibold text-text-primary font-display">Mavzu ma’lumotlari</h2>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
@@ -361,7 +361,7 @@ export default function LessonEditPage() {
                   className="w-full px-3 py-2 bg-surface-2 border border-border rounded-xl text-sm text-text-primary focus:outline-none focus:border-blue-500/50 transition-colors font-mono"
                 />
                 <p className="mt-1 text-xs text-text-muted">
-                  YouTube, Google Drive yoki Vimeo linklarini qo'llab-quvvatlaydi.<br />
+                  YouTube, Google Drive yoki Vimeo linklarini qo‘llab-quvvatlaydi.<br />
                   <span className="text-blue-400">Google Drive:</span> drive.google.com/file/d/FILE_ID/view
                 </p>
               </div>
@@ -393,7 +393,7 @@ export default function LessonEditPage() {
         <Card>
           <CardHeader>
             <div className="flex items-center justify-between">
-              <h2 className="font-semibold text-text-primary font-display">Ma'ruza matni (Markdown)</h2>
+              <h2 className="font-semibold text-text-primary font-display">Ma’ruza matni (Markdown)</h2>
               <div className="flex items-center gap-2">
                 {saveMsg && (
                   <span className={`text-sm flex items-center gap-1 ${saveMsg.startsWith('Xato') || saveMsg.includes('xato') ? 'text-red-400' : 'text-emerald-400'}`}>
@@ -410,12 +410,12 @@ export default function LessonEditPage() {
           </CardHeader>
           <CardContent>
             <div className="mb-3 p-3 bg-blue-500/5 border border-blue-500/20 rounded-xl">
-              <p className="text-xs text-blue-400 font-medium mb-1">Markdown qo'llanmasi:</p>
+              <p className="text-xs text-blue-400 font-medium mb-1">Markdown qo‘llanmasi:</p>
               <div className="text-xs text-text-muted grid grid-cols-2 gap-x-6 gap-y-1">
                 <span><code className="text-blue-400"># Sarlavha 1</code> — katta sarlavha</span>
-                <span><code className="text-blue-400">## Sarlavha 2</code> — o'rta sarlavha</span>
+                <span><code className="text-blue-400">## Sarlavha 2</code> — o‘rta sarlavha</span>
                 <span><code className="text-blue-400">**qalin**</code> — qalin matn</span>
-                <span><code className="text-blue-400">- element</code> — ro'yxat</span>
+                <span><code className="text-blue-400">- element</code> — ro‘yxat</span>
                 <span><code className="text-blue-400">```kod```</code> — kod bloki</span>
                 <span><code className="text-blue-400">&gt; iqtibos</code> — iqtibos</span>
               </div>
@@ -425,7 +425,7 @@ export default function LessonEditPage() {
               onChange={(e) => setForm((p) => ({ ...p, lectureText: e.target.value }))}
               rows={30}
               className="w-full px-4 py-3 bg-surface-2 border border-border rounded-xl text-sm text-text-primary focus:outline-none focus:border-blue-500/50 transition-colors font-mono resize-y leading-relaxed"
-              placeholder="# Mavzu nomi&#10;&#10;## Kirish&#10;&#10;Ma'ruza matni shu yerda..."
+              placeholder="# Mavzu nomi&#10;&#10;## Kirish&#10;&#10;Ma’ruza matni shu yerda..."
             />
           </CardContent>
         </Card>
@@ -436,7 +436,7 @@ export default function LessonEditPage() {
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <p className="text-text-secondary text-sm">
-              {questions.length} ta savol · o'tish uchun 60% kerak
+              {questions.length} ta savol · o‘tish uchun 60% kerak
             </p>
             <Button onClick={openNewQ}>
               <Plus size={14} />
@@ -447,10 +447,10 @@ export default function LessonEditPage() {
           {questions.length === 0 ? (
             <Card className="p-12 text-center">
               <ClipboardList size={32} className="text-text-muted mx-auto mb-3" />
-              <p className="text-text-muted mb-4">Hali savol qo'shilmagan</p>
+              <p className="text-text-muted mb-4">Hali savol qo‘shilmagan</p>
               <Button onClick={openNewQ}>
                 <Plus size={14} />
-                Birinchi savolni qo'shish
+                Birinchi savolni qo‘shish
               </Button>
             </Card>
           ) : (
@@ -534,7 +534,7 @@ export default function LessonEditPage() {
               </label>
               {qForm.options.length < 6 && (
                 <button onClick={addOption} className="text-xs text-blue-400 hover:text-blue-300 flex items-center gap-1">
-                  <Plus size={12} />Variant qo'shish
+                  <Plus size={12} />Variant qo‘shish
                 </button>
               )}
             </div>
@@ -549,7 +549,7 @@ export default function LessonEditPage() {
                         ? 'bg-emerald-500/20 border-emerald-500/40 text-emerald-400'
                         : 'bg-surface-2 border-border text-text-muted hover:border-blue-500/40'
                     )}
-                    title="To'g'ri javob sifatida belgilash"
+                    title="To‘g'ri javob sifatida belgilash"
                   >
                     {qForm.correctIndex === i ? <Check size={13} /> : OPTION_LABELS[i]}
                   </button>
@@ -576,7 +576,7 @@ export default function LessonEditPage() {
               ))}
             </div>
             <p className="mt-2 text-xs text-text-muted">
-              ✓ belgisini bosib to'g'ri javobni belgilang
+              ✓ belgisini bosib to‘g'ri javobni belgilang
             </p>
           </div>
 
@@ -589,7 +589,7 @@ export default function LessonEditPage() {
               type="text"
               value={qForm.explanation}
               onChange={(e) => setQForm((p) => ({ ...p, explanation: e.target.value }))}
-              placeholder="Nima uchun bu javob to'g'ri..."
+              placeholder="Nima uchun bu javob to‘g'ri..."
               className="w-full px-3 py-2 bg-surface-2 border border-border rounded-xl text-sm text-text-primary placeholder-text-muted focus:outline-none focus:border-blue-500/50 transition-colors"
             />
           </div>

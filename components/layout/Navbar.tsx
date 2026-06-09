@@ -131,7 +131,7 @@ export default function Navbar() {
                   href="/auth/register"
                   className="px-5 py-2.5 text-sm font-medium rounded-xl bg-accent-copper text-[#0f172a] border border-primary hover:bg-accent-copper-light transition-all shadow-[inset_0_1px_2px_rgba(255,255,255,0.3)] glow-copper"
                 >
-                  Ro'yxatdan o'tish
+                  Ro‘yxatdan o‘tish
                 </Link>
               </div>
             )}

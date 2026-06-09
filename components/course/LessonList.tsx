@@ -74,7 +74,7 @@ export default function LessonList({ lessons, currentLessonId, progress = [], co
                     </span>
                     <span className={cn('flex items-center gap-1 text-xs', prog?.lectureRead ? 'text-emerald-600' : 'text-text-muted')}>
                       <BookOpen size={11} />
-                      Ma'ruza
+                      Ma’ruza
                     </span>
                     <span className={cn('flex items-center gap-1 text-xs', prog?.testPassed ? 'text-emerald-600' : 'text-text-muted')}>
                       <ClipboardList size={11} />

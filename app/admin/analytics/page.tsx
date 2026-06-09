@@ -23,8 +23,8 @@ export default async function AnalyticsPage() {
 
   const summary = [
     { label: 'Jami urinishlar', value: totalAttempts, icon: <TrendingUp size={18} />, color: 'text-primary', bg: 'bg-primary/10' },
-    { label: "O'tilgan testlar", value: totalTestsPassed, icon: <CheckCircle2 size={18} />, color: 'text-emerald-600', bg: 'bg-emerald-600/10' },
-    { label: "O'rtacha ball", value: `${avgPct}%`, icon: <Award size={18} />, color: 'text-accent-copper-light', bg: 'bg-accent-copper-light/10' },
+    { label: "O‘tilgan testlar", value: totalTestsPassed, icon: <CheckCircle2 size={18} />, color: 'text-emerald-600', bg: 'bg-emerald-600/10' },
+    { label: "O‘rtacha ball", value: `${avgPct}%`, icon: <Award size={18} />, color: 'text-accent-copper-light', bg: 'bg-accent-copper-light/10' },
     { label: 'Kursni tugatgan', value: fullyCompleted, icon: <Users size={18} />, color: 'text-accent-copper', bg: 'bg-accent-copper/10' },
   ]
 

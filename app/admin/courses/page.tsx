@@ -58,7 +58,7 @@ export default function AdminCoursesPage() {
         ...newForm,
         topicNumber: Number(newForm.topicNumber) || lessons.length + 1,
         order: Number(newForm.order) || lessons.length + 1,
-        lectureText: `# ${newForm.title}\n\nMa'ruza matni shu yerda bo'ladi.`,
+        lectureText: `# ${newForm.title}\n\nMa’ruza matni shu yerda bo‘ladi.`,
       }),
     })
     setSaving(false)
@@ -68,7 +68,7 @@ export default function AdminCoursesPage() {
   }
 
   const handleDelete = async (id: string, title: string) => {
-    if (!confirm(`"${title}" darsini o'chirishni tasdiqlaysizmi?\nBu darsga tegishli barcha savollar ham o'chiriladi.`)) return
+    if (!confirm(`"${title}" darsini o‘chirishni tasdiqlaysizmi?\nBu darsga tegishli barcha savollar ham o‘chiriladi.`)) return
     await fetch('/api/admin/lessons', {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json' },
@@ -99,7 +99,7 @@ export default function AdminCoursesPage() {
           </div>
           <div>
             <p className="font-bold text-text-primary font-display">Raqamli Texnologiyalar va Innovatsiyalar</p>
-            <p className="text-sm text-text-secondary">Asosiy kurs · Barcha o'quvchilar uchun</p>
+            <p className="text-sm text-text-secondary">Asosiy kurs · Barcha o‘quvchilar uchun</p>
           </div>
           <div className="ml-auto flex gap-4 text-sm text-text-secondary">
             <span className="flex items-center gap-1"><BookOpen size={13} />{lessons.length} mavzu</span>
@@ -161,7 +161,7 @@ export default function AdminCoursesPage() {
       </div>
 
       {/* New lesson modal */}
-      <Modal open={showNew} onClose={() => setShowNew(false)} title="Yangi mavzu qo'shish" size="lg">
+      <Modal open={showNew} onClose={() => setShowNew(false)} title="Yangi mavzu qo‘shish" size="lg">
         <div className="space-y-4">
           <div className="grid grid-cols-2 gap-4">
             <div>
@@ -235,7 +235,7 @@ export default function AdminCoursesPage() {
             <Button variant="secondary" onClick={() => setShowNew(false)}>Bekor qilish</Button>
             <Button onClick={handleCreate} loading={saving} disabled={!newForm.title}>
               <Plus size={14} />
-              Qo'shish
+              Qo‘shish
             </Button>
           </div>
         </div>

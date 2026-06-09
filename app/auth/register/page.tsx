@@ -22,7 +22,7 @@ export default function RegisterPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setError('')
-    if (form.password.length < 6) { setError("Parol kamida 6 belgidan iborat bo'lishi kerak"); return }
+    if (form.password.length < 6) { setError("Parol kamida 6 belgidan iborat bo‘lishi kerak"); return }
     setLoading(true)
 
     const res = await fetch('/api/auth/register', {
@@ -55,10 +55,10 @@ export default function RegisterPage() {
       <div className="relative w-full max-w-sm">
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center mb-4">
-            <Image src="/logo.png" alt="M-ta'lim" width={200} height={64} className="h-16 w-auto object-contain" />
+            <Image src="/logo.png" alt="M-ta’lim" width={200} height={64} className="h-16 w-auto object-contain" />
           </div>
-          <h1 className="text-2xl font-bold font-display text-text-primary">Ro'yxatdan o'tish</h1>
-          <p className="text-sm text-text-muted mt-1">M-ta'lim — Mustaqil ta'lim platformasi</p>
+          <h1 className="text-2xl font-bold font-display text-text-primary">Ro‘yxatdan o‘tish</h1>
+          <p className="text-sm text-text-muted mt-1">M-ta’lim — Mustaqil ta’lim platformasi</p>
         </div>
 
         <div className="bg-surface border border-border rounded-2xl p-6 shadow-card">
@@ -110,7 +110,7 @@ export default function RegisterPage() {
             )}
 
             <Button type="submit" className="w-full" size="lg" loading={loading}>
-              Ro'yxatdan o'tish
+              Ro‘yxatdan o‘tish
             </Button>
           </form>
 

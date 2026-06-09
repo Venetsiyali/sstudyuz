@@ -9,7 +9,7 @@ import { LESSONS } from '@/lib/data'
 export default function HomePage() {
   const features = [
     { icon: <Play size={20} className="text-accent-copper" />, title: 'Video darslar', desc: '11 ta professional video ma\'ruza va loyiha, jami 22+ soat kontent' },
-    { icon: <BookOpen size={20} className="text-accent-copper" />, title: "Ma'ruza matnlari", desc: "Har bir mavzu bo'yicha batafsil ma'ruza matni va misollar" },
+    { icon: <BookOpen size={20} className="text-accent-copper" />, title: "Ma’ruza matnlari", desc: "Har bir mavzu bo‘yicha batafsil ma’ruza matni va misollar" },
     { icon: <ClipboardList size={20} className="text-accent-copper" />, title: 'Interaktiv testlar', desc: 'Sertifikatga ega bo\'lish uchun testlar va yakuniy loyiha himoyasi' },
     { icon: <Trophy size={20} className="text-accent-copper" />, title: 'Sertifikat', desc: "Kursni muvaffaqiyatli tugatib, loyihani himoya qilgach elektron sertifikat olasiz" },
   ]
@@ -44,20 +44,20 @@ export default function HomePage() {
             <div className="px-5 py-2 rounded-full bg-[#0f172a] backdrop-blur-md flex items-center gap-2 border border-transparent">
               <Hexagon size={14} className="text-accent-copper animate-pulse-slow" />
               <span className="text-sm font-medium tracking-wider text-text-primary uppercase">
-                Mustaqil ta'lim platformasi
+                Mustaqil ta’lim platformasi
               </span>
             </div>
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold font-display leading-tight mb-6">
-            <span className="text-text-primary">Kelajak ta'limiga</span>
+            <span className="text-text-primary">Kelajak ta’limiga</span>
             <br />
             <span className="text-gradient drop-shadow-sm">xush kelibsiz</span>
           </h1>
 
           <p className="text-lg md:text-xl text-text-primary/90 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
-            Raqamli texnologiyalar va innovatsiyalar bo'yicha zamonaviy kurs.
-            Bulut hisoblash, AI, blokcheyn va boshqa muhim 11 ta mavzuni hamda yakuniy amaliy loyihani o'zlashtiring.
+            Raqamli texnologiyalar va innovatsiyalar bo‘yicha zamonaviy kurs.
+            Bulut hisoblash, AI, blokcheyn va boshqa muhim 11 ta mavzuni hamda yakuniy amaliy loyihani o‘zlashtiring.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-5 justify-center">
@@ -69,7 +69,7 @@ export default function HomePage() {
             </Link>
             <Link href="/auth/register">
               <Button size="lg" variant="secondary" className="w-full sm:w-auto h-14 px-8 text-lg rounded-2xl">
-                Ro'yxatdan o'tish
+                Ro‘yxatdan o‘tish
               </Button>
             </Link>
           </div>
@@ -94,7 +94,7 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold font-display text-text-primary mb-4">
-              O'rganish qulay va samarali
+              O‘rganish qulay va samarali
             </h2>
             <div className="w-24 h-1 bg-accent-copper mx-auto rounded-full" />
           </div>
@@ -141,7 +141,7 @@ export default function HomePage() {
           <div className="text-center">
             <Link href="/course/raqamli-texnologiyalar">
               <Button variant="secondary" size="lg" className="rounded-2xl h-14 px-8 text-lg">
-                Kursni to'liq ko'rish
+                Kursni to‘liq ko‘rish
                 <ArrowRight size={18} />
               </Button>
             </Link>
@@ -156,7 +156,7 @@ export default function HomePage() {
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary-light text-sm font-medium mb-6">
                 <Zap size={14} />
-                Nima o'rganasiz?
+                Nima o‘rganasiz?
               </div>
               <h2 className="text-4xl font-bold font-display text-text-primary mb-8 leading-tight">
                 Kelajak texnologiyalariga <br/> tayyorlaning
@@ -185,7 +185,7 @@ export default function HomePage() {
               {[
                 { icon: <Shield size={28} className="text-accent-copper" />, title: 'Kiberxavfsizlik' },
                 { icon: <Globe size={28} className="text-accent-copper" />, title: 'Web texnologiyalar' },
-                { icon: <Zap size={28} className="text-accent-copper" />, title: "Sun'iy intellekt" },
+                { icon: <Zap size={28} className="text-accent-copper" />, title: "Sun’iy intellekt" },
                 { icon: <Trophy size={28} className="text-accent-copper" />, title: 'Sertifikat' },
               ].map((item) => (
                 <div key={item.title} className="glass card-hover rounded-2xl p-8 flex flex-col items-center justify-center text-center">
@@ -206,11 +206,11 @@ export default function HomePage() {
             Bugun boshlang
           </h2>
           <p className="text-xl text-text-muted mb-10 max-w-xl mx-auto">
-            Bepul ro'yxatdan o'ting va raqamli texnologiyalar dunyosiga kiring
+            Bepul ro‘yxatdan o‘ting va raqamli texnologiyalar dunyosiga kiring
           </p>
           <Link href="/auth/register">
             <Button size="lg" variant="secondary" className="h-16 px-10 text-lg rounded-2xl shadow-[0_0_20px_rgba(184,115,51,0.2)]">
-              Bepul ro'yxatdan o'tish
+              Bepul ro‘yxatdan o‘tish
               <ArrowRight size={20} className="ml-2" />
             </Button>
           </Link>

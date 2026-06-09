@@ -39,7 +39,7 @@ export default function StudentsPage() {
   useEffect(() => { load() }, [])
 
   const handleDelete = async (id: string, name: string) => {
-    if (!confirm(`"${name}" o'chirilsinmi?`)) return
+    if (!confirm(`"${name}" o‘chirilsinmi?`)) return
     await fetch('/api/admin/students', {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json' },
@@ -75,7 +75,7 @@ export default function StudentsPage() {
       <div className="flex items-center justify-between mb-6">
         <div>
           <h1 className="text-2xl font-bold font-display text-text-primary">Talabalar</h1>
-          <p className="text-text-secondary text-sm mt-1">{students.length} talaba ro'yxatdan o'tgan</p>
+          <p className="text-text-secondary text-sm mt-1">{students.length} talaba ro‘yxatdan o‘tgan</p>
         </div>
       </div>
 
@@ -85,7 +85,7 @@ export default function StudentsPage() {
         <input
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          placeholder="Ism, email yoki guruh bo'yicha qidirish..."
+          placeholder="Ism, email yoki guruh bo‘yicha qidirish..."
           className="w-full pl-10 pr-4 py-2.5 bg-surface border border-border rounded-xl text-sm text-text-primary placeholder-text-muted focus:outline-none focus:border-primary/50 transition-colors"
         />
       </div>

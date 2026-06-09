@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
     description: description ?? '',
     videoUrl: videoUrl ?? 'https://www.youtube.com/embed/dQw4w9WgXcQ',
     videoDuration: videoDuration ?? '1:00:00',
-    lectureText: lectureText ?? `# ${title}\n\nMa'ruza matni shu yerda bo'ladi.`,
+    lectureText: lectureText ?? `# ${title}\n\nMa’ruza matni shu yerda bo‘ladi.`,
     order: Number(order) || 1,
   })
 

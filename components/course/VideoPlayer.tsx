@@ -118,7 +118,7 @@ export default function VideoPlayer({ videoUrl, title, onWatched }: VideoPlayerP
             className="shrink-0 flex items-center gap-1.5 text-xs text-text-muted hover:text-primary transition-colors"
           >
             <ExternalLink size={13} />
-            Tashqida ko'rish
+            Tashqida ko‘rish
           </a>
         )}
       </div>

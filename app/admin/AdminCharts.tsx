@@ -84,7 +84,7 @@ export default function AdminCharts() {
         </CardHeader>
         <CardContent>
           {stats.topStudents.length === 0 ? (
-            <p className="text-text-muted text-sm">Ma'lumot yo'q</p>
+            <p className="text-text-muted text-sm">Ma’lumot yo‘q</p>
           ) : (
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
