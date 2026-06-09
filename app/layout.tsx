@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Noto_Serif } from 'next/font/google'
+import { Inter, Playfair_Display } from 'next/font/google'
 import './globals.css'
 import Providers from './providers'
 import Navbar from '@/components/layout/Navbar'
@@ -11,9 +11,9 @@ const inter = Inter({
   display: 'swap',
 })
 
-const notoSerif = Noto_Serif({
+const playfair = Playfair_Display({
   subsets: ['latin', 'cyrillic'],
-  variable: '--font-noto-serif',
+  variable: '--font-playfair',
   display: 'swap',
   weight: ['400', '600', '700'],
 })
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="uz">
-      <body className={`${inter.variable} ${notoSerif.variable} font-sans bg-background text-text-primary min-h-screen flex flex-col`}>
+      <body className={`${inter.variable} ${playfair.variable} font-sans bg-background text-text-primary min-h-screen flex flex-col`}>
         <Providers>
           <Navbar />
           <main className="flex-1 pt-16">

@@ -23,18 +23,25 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 group">
-            <Image src="/logo.png" alt="M-ta’lim" width={240} height={64} className="h-16 w-auto object-contain" />
+            <Image 
+              src="/logo.png" 
+              alt="M-ta’lim" 
+              width={240} 
+              height={64} 
+              className="h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+              style={{ filter: 'brightness(1.2) sepia(1) saturate(2) hue-rotate(-15deg)' }} 
+            />
           </Link>
 
           {/* Nav links */}
-          <nav className="hidden md:flex items-center gap-1">
+          <nav className="hidden md:flex items-center gap-4">
             <Link
               href="/"
               className={cn(
-                'px-4 py-2 rounded-lg text-lg font-medium transition-colors',
+                'px-2 py-2 text-lg font-display transition-colors nav-link',
                 pathname === '/'
-                  ? 'bg-[#1B4332]/10 text-[#1B4332]'
-                  : 'text-text-secondary hover:text-text-primary hover:bg-surface-2'
+                  ? 'text-accent-copper font-bold'
+                  : 'text-text-secondary hover:text-accent-copper-light'
               )}
             >
               Bosh sahifa
@@ -42,10 +49,10 @@ export default function Navbar() {
             <Link
               href="/course/raqamli-texnologiyalar"
               className={cn(
-                'px-4 py-2 rounded-lg text-lg font-medium transition-colors',
+                'px-2 py-2 text-lg font-display transition-colors nav-link',
                 pathname.startsWith('/course')
-                  ? 'bg-[#1B4332]/10 text-[#1B4332]'
-                  : 'text-text-secondary hover:text-text-primary hover:bg-surface-2'
+                  ? 'text-accent-copper font-bold'
+                  : 'text-text-secondary hover:text-accent-copper-light'
               )}
             >
               Kurs
@@ -54,13 +61,13 @@ export default function Navbar() {
               <Link
                 href="/admin"
                 className={cn(
-                  'px-4 py-2 rounded-lg text-lg font-medium transition-colors flex items-center gap-1.5',
+                  'px-2 py-2 text-lg font-display transition-colors flex items-center gap-1.5 nav-link',
                   pathname.startsWith('/admin')
-                    ? 'bg-[#B8860B]/10 text-[#B8860B]'
-                    : 'text-text-secondary hover:text-text-primary hover:bg-surface-2'
+                    ? 'text-accent-copper font-bold'
+                    : 'text-text-secondary hover:text-accent-copper-light'
                 )}
               >
-                <LayoutDashboard size={14} />
+                <LayoutDashboard size={16} />
                 Admin
               </Link>
             )}
@@ -72,21 +79,21 @@ export default function Navbar() {
               <div className="relative">
                 <button
                   onClick={() => setDropdownOpen(!dropdownOpen)}
-                  className="flex items-center gap-2 px-3 py-2 rounded-xl hover:bg-surface-2 transition-colors"
+                  className="flex items-center gap-2 px-3 py-2 rounded-xl hover:bg-surface-3 transition-colors border border-transparent hover:border-border-light"
                 >
-                  <div className="w-7 h-7 rounded-full bg-[#1B4332] flex items-center justify-center text-white text-xs font-bold">
+                  <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-text-primary text-sm font-bold shadow-inner border border-primary-light/30">
                     {session.user?.name?.[0]?.toUpperCase() ?? 'U'}
                   </div>
-                  <span className="hidden sm:block text-sm text-text-primary max-w-[120px] truncate">
+                  <span className="hidden sm:block text-sm font-medium text-accent-copper max-w-[120px] truncate">
                     {session.user?.name}
                   </span>
-                  <ChevronDown size={14} className="text-text-muted" />
+                  <ChevronDown size={14} className="text-accent-copper" />
                 </button>
 
                 {dropdownOpen && (
                   <>
                     <div className="fixed inset-0 z-10" onClick={() => setDropdownOpen(false)} />
-                    <div className="absolute right-0 top-full mt-2 w-48 bg-surface border border-border rounded-xl shadow-card z-20 overflow-hidden">
+                    <div className="absolute right-0 top-full mt-2 w-48 bg-surface-2 border border-border-light rounded-xl shadow-card z-20 overflow-hidden backdrop-blur-md">
                       <div className="px-4 py-3 border-b border-border">
                         <p className="text-sm font-medium text-text-primary truncate">{session.user?.name}</p>
                         <p className="text-xs text-text-muted truncate">{session.user?.email}</p>
@@ -95,14 +102,14 @@ export default function Navbar() {
                         <Link
                           href="/profile"
                           onClick={() => setDropdownOpen(false)}
-                          className="flex items-center gap-2 px-3 py-2 text-sm text-text-secondary hover:text-text-primary hover:bg-surface-2 rounded-lg transition-colors"
+                          className="flex items-center gap-2 px-3 py-2 text-sm text-text-secondary hover:text-accent-copper hover:bg-surface-3 rounded-lg transition-colors"
                         >
                           <User size={14} />
                           Profil
                         </Link>
                         <button
                           onClick={() => { setDropdownOpen(false); signOut({ callbackUrl: '/' }) }}
-                          className="w-full flex items-center gap-2 px-3 py-2 text-sm text-red-500 hover:bg-red-500/10 rounded-lg transition-colors"
+                          className="w-full flex items-center gap-2 px-3 py-2 text-sm text-red-400 hover:bg-red-400/10 rounded-lg transition-colors"
                         >
                           <LogOut size={14} />
                           Chiqish
@@ -113,16 +120,16 @@ export default function Navbar() {
                 )}
               </div>
             ) : (
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-3">
                 <Link
                   href="/auth/login"
-                  className="px-3 py-2 text-sm text-text-secondary hover:text-text-primary hover:bg-surface-2 rounded-xl transition-colors"
+                  className="px-3 py-2 text-sm font-medium text-accent-copper hover:text-accent-copper-light transition-colors"
                 >
                   Kirish
                 </Link>
                 <Link
                   href="/auth/register"
-                  className="px-4 py-2 text-sm font-medium rounded-xl bg-[#1B4332] hover:bg-[#2D6A4F] text-white transition-all"
+                  className="px-5 py-2.5 text-sm font-medium rounded-xl bg-accent-copper text-[#0f172a] border border-primary hover:bg-accent-copper-light transition-all shadow-[inset_0_1px_2px_rgba(255,255,255,0.3)] glow-copper"
                 >
                   Ro'yxatdan o'tish
                 </Link>
