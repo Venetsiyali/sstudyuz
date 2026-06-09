@@ -56,18 +56,18 @@ function CertificateModal({ user, pct, grade, onClose }: { user: any; pct: numbe
         {/* Main content */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full px-10 py-8" style={{ minHeight: '100%' }}>
           {/* Top decorative line */}
-          <div className="flex items-center gap-4 mb-3">
-            <div className="h-px w-20 bg-gradient-to-r from-transparent to-[#b8860b]" />
-            <Star size={14} className="text-[#b8860b]" />
-            <div className="h-px w-20 bg-gradient-to-l from-transparent to-[#b8860b]" />
+          <div className="flex items-center justify-center w-full gap-4 mb-4">
+            <div className="h-px w-32 bg-gradient-to-r from-transparent to-[#b8860b]" />
+            <img src="/logo.png" alt="M-ta'lim Logo" className="w-20 h-20 object-contain drop-shadow-sm" />
+            <div className="h-px w-32 bg-gradient-to-l from-transparent to-[#b8860b]" />
           </div>
 
           {/* University name */}
-          <h2 className="text-lg font-bold text-[#1B4332] tracking-wide mb-1" style={{ fontFamily: 'Georgia, serif' }}>
-            M-TA&apos;LIM
+          <h2 className="text-3xl font-bold text-[#1B4332] tracking-widest mb-1 uppercase" style={{ fontFamily: '"Times New Roman", Times, serif' }}>
+            M-ta'lim
           </h2>
-          <p className="text-[10px] tracking-[0.25em] uppercase text-[#555] mb-4">
-            Mustaqil ta&apos;lim platformasi
+          <p className="text-xs tracking-[0.25em] uppercase text-[#555] mb-6" style={{ fontFamily: '"Times New Roman", Times, serif' }}>
+            Mustaqil ta'lim platformasi
           </p>
 
           {/* Decorative divider */}
@@ -78,82 +78,82 @@ function CertificateModal({ user, pct, grade, onClose }: { user: any; pct: numbe
           </div>
 
           {/* SERTIFIKAT title */}
-          <h1 className="text-4xl font-bold tracking-wider text-[#1a1a1a] mb-1" style={{ fontFamily: 'Georgia, serif', letterSpacing: '0.15em' }}>
+          <h1 className="text-5xl font-bold tracking-wider text-[#1a1a1a] mb-2" style={{ fontFamily: '"Times New Roman", Times, serif', letterSpacing: '0.15em' }}>
             SERTIFIKAT
           </h1>
-          <p className="text-[10px] tracking-[0.2em] uppercase text-[#999] mb-5">Certificate of Completion</p>
+          <p className="text-xs tracking-[0.2em] uppercase text-[#999] mb-6" style={{ fontFamily: '"Times New Roman", Times, serif' }}>Certificate of Completion</p>
 
           {/* Body text */}
-          <p className="text-sm text-[#555] mb-2">Ushbu sertifikat</p>
+          <p className="text-base text-[#555] mb-2" style={{ fontFamily: '"Times New Roman", Times, serif' }}>Ushbu sertifikat</p>
 
           {/* Student name */}
-          <div className="relative mb-2">
-            <h3 className="text-3xl font-bold text-[#1a1a1a] px-8" style={{ fontFamily: 'Georgia, serif' }}>
+          <div className="relative mb-2 mt-1">
+            <h3 className="text-4xl font-bold text-[#1a1a1a] px-10" style={{ fontFamily: '"Times New Roman", Times, serif' }}>
               {user.name}
             </h3>
-            <div className="absolute -bottom-1 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#b8860b] to-transparent" />
+            <div className="absolute -bottom-2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#b8860b] to-transparent" />
           </div>
 
           {/* Student details */}
-          <div className="flex items-center gap-4 text-[11px] text-[#777] mb-3 mt-2">
+          <div className="flex items-center gap-4 text-xs text-[#777] mb-4 mt-3" style={{ fontFamily: '"Times New Roman", Times, serif' }}>
             {user.studentId && <span>Talaba ID: <strong className="text-[#555]">{user.studentId}</strong></span>}
             {user.studentId && user.group && <span className="text-[#ccc]">|</span>}
             {user.group && <span>Guruh: <strong className="text-[#555]">{user.group}</strong></span>}
           </div>
 
           {/* Course completed */}
-          <p className="text-sm text-[#555] mb-2">ga quyidagi kursni muvaffaqiyatli tugatgani uchun berildi:</p>
+          <p className="text-base text-[#555] mb-4" style={{ fontFamily: '"Times New Roman", Times, serif' }}>ga quyidagi kursni muvaffaqiyatli tugatgani uchun berildi:</p>
 
-          <div className="bg-[#f8f6f0] border border-[#e8e4d8] rounded-lg px-8 py-3 mb-4">
-            <p className="text-lg font-bold text-[#1B4332]" style={{ fontFamily: 'Georgia, serif' }}>
-              &ldquo;Raqamli Texnologiyalar va Innovatsiyalar&rdquo;
+          <div className="bg-[#f8f6f0] border border-[#e8e4d8] rounded-xl px-12 py-5 mb-5 w-full max-w-3xl text-center shadow-sm">
+            <p className="text-2xl font-bold text-[#1B4332]" style={{ fontFamily: '"Times New Roman", Times, serif' }}>
+              "Raqamli texnologiyalar va innovatsiyalar"
             </p>
-            <p className="text-[11px] text-[#999] mt-0.5">11 ta mavzu va Yakuniy amaliy loyiha himoyasi</p>
+            <p className="text-sm text-[#777] mt-2 italic" style={{ fontFamily: '"Times New Roman", Times, serif' }}>11 ta mavzu va yakuniy amaliy loyiha himoyasi</p>
           </div>
 
           {/* Score badges */}
-          <div className="flex items-center gap-6 mb-5">
+          <div className="flex items-center gap-8 mb-6 mt-2">
             <div className="text-center">
-              <div className="w-16 h-16 rounded-full border-3 flex items-center justify-center mx-auto mb-1" style={{ borderWidth: '3px', borderColor: '#b8860b' }}>
-                <span className="text-xl font-bold text-[#1a1a1a]" style={{ fontFamily: 'Georgia, serif' }}>{pct}%</span>
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-1.5" style={{ borderWidth: '3px', borderColor: '#b8860b' }}>
+                <span className="text-xl font-bold text-[#1a1a1a]" style={{ fontFamily: '"Times New Roman", Times, serif' }}>{pct}%</span>
               </div>
-              <p className="text-[10px] text-[#999] uppercase tracking-wider">Umumiy ball</p>
+              <p className="text-[10px] text-[#999] uppercase tracking-wider" style={{ fontFamily: '"Times New Roman", Times, serif' }}>Umumiy ball</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-1" style={{ borderWidth: '3px', borderColor: '#1B4332', border: '3px solid #1B4332' }}>
-                <span className="text-2xl font-bold text-[#1B4332]" style={{ fontFamily: 'Georgia, serif' }}>{grade}</span>
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-1.5" style={{ borderWidth: '3px', borderColor: '#1B4332' }}>
+                <span className="text-2xl font-bold text-[#1B4332]" style={{ fontFamily: '"Times New Roman", Times, serif' }}>{grade}</span>
               </div>
-              <p className="text-[10px] text-[#999] uppercase tracking-wider">Baho</p>
+              <p className="text-[10px] text-[#999] uppercase tracking-wider" style={{ fontFamily: '"Times New Roman", Times, serif' }}>Baho</p>
             </div>
           </div>
 
           {/* Bottom section: date + signatures */}
-          <div className="w-full max-w-xl">
+          <div className="w-full max-w-2xl mt-auto">
             <div className="flex items-end justify-between">
               {/* Date */}
-              <div className="text-center">
-                <p className="text-xs text-[#1a1a1a] font-medium mb-1">{today}</p>
-                <div className="h-px w-32 bg-[#333] mb-1" />
-                <p className="text-[10px] text-[#999]">Sana</p>
+              <div className="text-center w-32">
+                <p className="text-sm text-[#1a1a1a] font-medium mb-1" style={{ fontFamily: '"Times New Roman", Times, serif' }}>{today}</p>
+                <div className="h-px w-full bg-[#333] mb-1" />
+                <p className="text-[11px] text-[#999] uppercase tracking-wider mt-1.5" style={{ fontFamily: '"Times New Roman", Times, serif' }}>Sana</p>
               </div>
 
               {/* Seal */}
-              <div className="flex flex-col items-center -mt-2">
-                <div className="w-20 h-20 rounded-full border-2 border-dashed border-[#b8860b]/50 flex items-center justify-center">
-                  <div className="w-16 h-16 rounded-full border border-[#b8860b]/30 flex items-center justify-center">
+              <div className="flex flex-col items-center">
+                <div className="w-24 h-24 rounded-full border-2 border-dashed border-[#b8860b]/60 flex items-center justify-center">
+                  <div className="w-20 h-20 rounded-full border-2 border-[#b8860b]/40 flex items-center justify-center">
                     <div className="text-center">
-                      <Award size={16} className="text-[#b8860b] mx-auto mb-0.5" />
-                      <p className="text-[7px] font-bold text-[#b8860b] leading-tight">M-ta&apos;lim<br/>MUHR</p>
+                      <Award size={22} className="text-[#b8860b] mx-auto mb-1" />
+                      <p className="text-[9px] font-bold text-[#b8860b] leading-tight" style={{ fontFamily: '"Times New Roman", Times, serif', letterSpacing: '0.1em' }}>M-ta'lim<br/>MUHR</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Signature */}
-              <div className="text-center">
-                <p className="text-xs text-[#1a1a1a] font-medium mb-1 italic" style={{ fontFamily: 'Georgia, serif' }}>O&apos;qituvchi</p>
-                <div className="h-px w-32 bg-[#333] mb-1" />
-                <p className="text-[10px] text-[#999]">Imzo</p>
+              <div className="text-center w-32">
+                <p className="text-sm text-[#1a1a1a] font-medium mb-1 italic" style={{ fontFamily: '"Times New Roman", Times, serif' }}>O'qituvchi</p>
+                <div className="h-px w-full bg-[#333] mb-1" />
+                <p className="text-[11px] text-[#999] uppercase tracking-wider mt-1.5" style={{ fontFamily: '"Times New Roman", Times, serif' }}>Imzo</p>
               </div>
             </div>
           </div>
