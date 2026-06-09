@@ -69,7 +69,7 @@ TALABA LOYIHASI MATNI:
 
     const chatCompletion = await groq.chat.completions.create({
       messages: [{ role: 'user', content: prompt }],
-      model: 'llama-3.1-70b-versatile',
+      model: 'llama-3.3-70b-versatile',
       temperature: 0.2,
       response_format: { type: 'json_object' }
     })
