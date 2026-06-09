@@ -39,11 +39,11 @@ export default function HomePage() {
         <div className="relative max-w-4xl mx-auto text-center">
           <Badge variant="blue" className="mb-6 inline-flex">
             <Star size={11} />
-            M-ta'lim — Mustaqil ta'lim platformasi
+            M-ta’lim — Mustaqil ta’lim platformasi
           </Badge>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-display leading-tight mb-6">
-            <span className="text-text-primary">Mustaqil ta'lim</span>
+            <span className="text-text-primary">Mustaqil ta’lim</span>
             <br />
             <span className="text-gradient">platformasi</span>
           </h1>
